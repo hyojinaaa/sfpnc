@@ -13,7 +13,16 @@
 
     <!-- site header -->
     <header class="site-header">
-      <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri() ?>/../uploads/2016/11/logo-transparent.png" alt="Society of Philosophy and Culture logo"></a>
+      <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+          <div class='site-logo'>
+              <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+          </div>
+      <?php else : ?>
+          <hgroup>
+              <h1 class='site-title'><a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
+              <h2 class='site-description'><?php bloginfo( 'description' ); ?></h2>
+          </hgroup>
+      <?php endif; ?>
 
       <nav class="site-nav">
         <?php  wp_nav_menu(  ); ?>

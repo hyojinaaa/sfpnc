@@ -15,6 +15,9 @@ header {
   background-color: red;
   margin-top: 0;
 }
+header .site-logo img {
+  width: 100px;
+}
 main {
   width: 88%;
   background-color: yellow;
