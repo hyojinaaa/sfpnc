@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 /*
   Template Name : Society of Philosophy and Culture
   Author: Hyojin Jung
@@ -6,19 +8,31 @@
 */
 html {
   margin-top: 0!important;
+  min-height: 100%;
+  /* make sure it is at least as tall as the viewport */
+  position: relative;
 }
 body {
   margin-top: 0;
   padding-top: 0;
   display: flex;
   font-family: 'PT Sans', sans-serif;
+  height: 100%;
 }
 /********* Header ***********/
 header {
   width: 12%;
+  height: 100%;
   background-color: #D0D0D0;
   margin-top: 0;
   padding-bottom: 50px;
+  position: fixed;
+  /* Stay in place */
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding: 10px;
 }
 header .site-logo {
   width: 130px;
@@ -54,8 +68,11 @@ header .links p {
   font-size: 10px;
   text-align: center;
 }
+hr {
+  color: #333;
+}
 main {
-  width: 88%;
+  width: 100%;
   background-color: yellow;
 }
 /*# sourceMappingURL=style.css.map */

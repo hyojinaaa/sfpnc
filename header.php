@@ -38,11 +38,13 @@
         <p>McMaster University  |  Canada</p>
       </div>
 
-      <div class="copyright">
+      <hr>
+
+      <div class="copyright links">
         <p>© All Contents are Copyrighted by <strong>Society for Philosophy & Culture <?php echo date('Y')  ?></strong></p>
       </div>
 
-      <div class="developer-links">
+      <div class="developer-links links">
         <p>Logo designed by <strong>Frances Denton</strong></p>
         <p>Website design and developed by <strong>Hyojin Jung</strong></p>
       </div>

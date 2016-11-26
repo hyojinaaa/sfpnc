@@ -27,6 +27,12 @@ header {
   background-color: #D0D0D0;
   margin-top: 0;
   padding-bottom: 50px;
+  position: fixed; /* Stay in place */
+  //z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding: 10px;
   .site-logo {
     width: 130px;
     margin: 0 auto;
@@ -69,7 +75,11 @@ header {
   }
 }
 
+hr {
+  color: #333;
+}
+
 main {
-  width: 88%;
+  width: 100%;
   background-color: yellow;
 }
