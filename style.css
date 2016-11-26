@@ -1,0 +1,22 @@
+/*
+  Template Name : Society of Philosophy and Culture
+  Author: Hyojin Jung
+  Author URI : jinawebdev.com
+  Version: 1.0
+*/
+body {
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+}
+/********* Header ***********/
+header {
+  width: 12%;
+  background-color: red;
+  margin-top: 0;
+}
+main {
+  width: 88%;
+  background-color: yellow;
+}
+/*# sourceMappingURL=style.css.map */
