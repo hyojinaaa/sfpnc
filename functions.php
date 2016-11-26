@@ -5,7 +5,7 @@ function sopcResources() {
   wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', array(), '3.0.1', 'all' );
   wp_enqueue_script( 'bootstrap-js' );
   wp_enqueue_style( 'bootstrap-css' );
-  wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'); 
+  wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
   wp_enqueue_style('style', get_stylesheet_uri());
 }
 
@@ -35,3 +35,13 @@ function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
 add_action('get_header', 'remove_admin_login_header');
+
+//Add customer header
+$args = array(
+	'flex-width'    => true,
+	'width'         => '100%',
+	'flex-height'    => true,
+	'height'        => 'auto',
+	'default-image' => get_template_directory_uri() . '/images/header.jpg',
+);
+add_theme_support( 'custom-header', $args );

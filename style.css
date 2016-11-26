@@ -36,14 +36,18 @@ header {
 }
 header .site-logo {
   width: 130px;
-  margin: 0 auto;
   padding-top: 50px;
 }
 header .site-logo img {
   width: 100%;
 }
 header nav {
+  margin: 0 auto;
   margin-top: 30px;
+  width: 130px;
+}
+header nav ul {
+  padding-left: 0;
 }
 header nav li {
   list-style: none;
@@ -71,8 +75,34 @@ header .links p {
 hr {
   color: #333;
 }
+/********* Main ***********/
 main {
   width: 100%;
-  background-color: yellow;
+  margin-left: 12%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  /* Stay in place */
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+}
+/********* Home Page ***********/
+.hero {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: table;
+}
+.hero .hero-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.hero .hero-text h1 {
+  color: white;
+  font-family: 'Merriweather', serif;
 }
 /*# sourceMappingURL=style.css.map */

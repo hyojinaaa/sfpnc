@@ -4,17 +4,12 @@ get_header(); ?>
 
 <main>
 
-<?php if( have_posts() ) :
-	while (have_posts()) : the_post(); ?>
-
-	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	<p><?php the_content(); ?></p>
-
-	<?php endwhile;
-else:
-	echo '<p>No content found</p>';
-
-endif; ?>
+<div class="hero" style="background-image:url(<?php header_image(); ?>)" height="auto" width="100%">
+	<!-- <img src="<?php header_image(); ?>" height="auto" width="100%" alt="" /> -->
+	<div class="hero-text">
+		<h1>Upcoming Seminars</h1>
+	</div>
+</div>
 
 </main>
 

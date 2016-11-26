@@ -35,15 +35,18 @@ header {
   padding: 10px;
   .site-logo {
     width: 130px;
-    margin: 0 auto;
     padding-top: 50px;
     img {
       width: 100%;
     }
   }
   nav {
+    margin: 0 auto;
     margin-top: 30px;
-
+    width: 130px;
+    ul {
+      padding-left: 0;
+    }
     li {
       list-style: none;
       margin-bottom: 8px;
@@ -79,7 +82,34 @@ hr {
   color: #333;
 }
 
+/********* Main ***********/
+
 main {
   width: 100%;
-  background-color: yellow;
+  margin-left: 12%;
+  height: 100%;
+  background-color: black;
+  position: fixed; /* Stay in place */
+  //z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/********* Home Page ***********/
+.hero {
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: table;
+  .hero-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    h1 {
+      color: white;
+      font-family: 'Merriweather', serif;
+    }
+  }
 }
