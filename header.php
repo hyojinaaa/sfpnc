@@ -25,6 +25,25 @@
       <?php endif; ?>
 
       <nav class="site-nav">
-        <?php  wp_nav_menu(  ); ?>
+        <?php  wp_nav_menu(); ?>
       </nav>
+
+      <div class="social-network">
+        <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="links">
+        <p>Victoria University  |  NZ</p>
+        <p>McMaster University  |  Canada</p>
+      </div>
+
+      <div class="copyright">
+        <p>© All Contents are Copyrighted by <strong>Society for Philosophy & Culture <?php echo date('Y')  ?></strong></p>
+      </div>
+
+      <div class="developer-links">
+        <p>Logo designed by <strong>Frances Denton</strong></p>
+        <p>Website design and developed by <strong>Hyojin Jung</strong></p>
+      </div>
     </header><!-- /site header -->

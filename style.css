@@ -4,19 +4,55 @@
   Author URI : jinawebdev.com
   Version: 1.0
 */
+html {
+  margin-top: 0!important;
+}
 body {
   margin-top: 0;
   padding-top: 0;
   display: flex;
+  font-family: 'PT Sans', sans-serif;
 }
 /********* Header ***********/
 header {
   width: 12%;
-  background-color: red;
+  background-color: #D0D0D0;
   margin-top: 0;
+  padding-bottom: 50px;
+}
+header .site-logo {
+  width: 130px;
+  margin: 0 auto;
+  padding-top: 50px;
 }
 header .site-logo img {
-  width: 100px;
+  width: 100%;
+}
+header nav {
+  margin-top: 30px;
+}
+header nav li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+header nav li a {
+  color: black;
+  font-family: 'Merriweather', serif;
+}
+header .social-network {
+  width: 50px;
+  margin: 0 auto;
+}
+header .social-network a {
+  color: black;
+}
+header .social-network i {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+header .links p {
+  font-size: 10px;
+  text-align: center;
 }
 main {
   width: 88%;

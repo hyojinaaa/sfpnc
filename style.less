@@ -4,19 +4,67 @@
   Author URI : jinawebdev.com
   Version: 1.0
 */
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+html {
+  margin-top: 0!important;
+  min-height:100%;/* make sure it is at least as tall as the viewport */
+  position:relative;
+}
+
 body {
   margin-top: 0;
   padding-top: 0;
   display: flex;
+  font-family: 'PT Sans', sans-serif;
+  height:100%;
 }
 /********* Header ***********/
 header {
   width: 12%;
-  background-color: red;
+  height: 100%;
+  background-color: #D0D0D0;
   margin-top: 0;
+  padding-bottom: 50px;
   .site-logo {
+    width: 130px;
+    margin: 0 auto;
+    padding-top: 50px;
     img {
-      width: 100px;
+      width: 100%;
+    }
+  }
+  nav {
+    margin-top: 30px;
+
+    li {
+      list-style: none;
+      margin-bottom: 8px;
+      a {
+        color: black;
+        font-family: 'Merriweather', serif;
+      }
+    }
+  }
+  .social-network {
+   width: 50px;
+   margin: 0 auto;
+   a {
+     color: black;
+   }
+   i {
+     margin-right: 3px;
+     margin-left: 3px;
+     &:hover {
+
+     }
+   }
+  }
+  .links {
+    p {
+      font-size : 10px;
+      text-align: center;
     }
   }
 }
