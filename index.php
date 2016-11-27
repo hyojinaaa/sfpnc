@@ -2,7 +2,7 @@
 
 get_header(); ?>
 
-<main>
+<main class="home">
 
 <div class="hero" style="background-image:url(<?php header_image(); ?>)" height="auto" width="100%">
 	<div id="custom-search-input" class="pull-right">
