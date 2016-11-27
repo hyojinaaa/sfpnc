@@ -34,8 +34,8 @@
       </div>
 
       <div class="links">
-        <p>Victoria University  |  NZ</p>
-        <p>McMaster University  |  Canada</p>
+        <a href=""><p>Victoria University  |  NZ</p></a>
+        <a href=""><p>McMaster University  |  Canada</p></a>
       </div>
 
       <hr>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="developer-links links">
-        <p>Logo designed by <strong>Frances Denton</strong></p>
-        <p>Website design and developed by <strong>Hyojin Jung</strong></p>
+        <p>Logo designed <br>by <strong>Frances Denton</strong></p>
+        <p>Website design and developed by <strong><a href="http://jinawebdev.com">Hyojin Jung</a></strong></p>
       </div>
     </header><!-- /site header -->

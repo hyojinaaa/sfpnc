@@ -21,7 +21,7 @@ body {
 }
 /********* Header ***********/
 header {
-  width: 12%;
+  width: 150px;
   height: 100%;
   background-color: #D0D0D0;
   margin-top: 0;
@@ -36,7 +36,7 @@ header {
 }
 header .site-logo {
   width: 130px;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 header .site-logo img {
   width: 100%;
@@ -45,9 +45,10 @@ header nav {
   margin: 0 auto;
   margin-top: 30px;
   width: 130px;
+  margin-bottom: 30px;
 }
 header nav ul {
-  padding-left: 0;
+  padding-left: 5px;
 }
 header nav li {
   list-style: none;
@@ -57,9 +58,14 @@ header nav li a {
   color: black;
   font-family: 'Merriweather', serif;
 }
+header nav li a:hover {
+  color: black;
+  text-decoration: underline;
+}
 header .social-network {
   width: 50px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 header .social-network a {
   color: black;
@@ -68,17 +74,22 @@ header .social-network i {
   margin-right: 3px;
   margin-left: 3px;
 }
+header .social-network i:hover {
+  color: #333;
+}
+header .links a,
 header .links p {
   font-size: 10px;
   text-align: center;
+  color: black;
 }
 hr {
-  color: #333;
+  border-top: 1px solid #333;
 }
 /********* Main ***********/
 main {
   width: 100%;
-  margin-left: 12%;
+  margin-left: 150px;
   height: 100%;
   background-color: black;
   position: fixed;
@@ -90,19 +101,53 @@ main {
 }
 /********* Home Page ***********/
 .hero {
-  height: 250px;
+  height: 500px;
   width: 100%;
   background-size: cover;
   background-position: center;
-  display: table;
+  overflow: hidden;
 }
 .hero .hero-text {
-  display: table-cell;
-  vertical-align: middle;
   text-align: center;
 }
 .hero .hero-text h1 {
   color: white;
   font-family: 'Merriweather', serif;
+  letter-spacing: 2px;
+  padding-top: 100px;
+  margin-left: -150px;
+}
+.hero #custom-search-input {
+  margin-right: 200px;
+  width: 200px;
+  border-bottom: solid 1px #E4E4E4;
+  background-color: transparent;
+}
+.hero #custom-search-input input {
+  box-shadow: none;
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  letter-spacing: 2px;
+}
+.hero #custom-search-input input:focus {
+  color: white;
+}
+.hero #custom-search-input button {
+  margin: 2px 0 0 0;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  color: white;
+  padding: 0 8px 0 10px;
+}
+.hero #custom-search-input button:hover {
+  border: 0;
+  box-shadow: none;
+  color: #333;
+}
+.hero #custom-search-input .glyphicon-search {
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */
