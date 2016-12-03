@@ -32,16 +32,19 @@ header nav {
   margin: 0 auto;
   margin-top: 30px;
   max-width: 900px;
+  padding: 10px;
+  padding-bottom: 0;
 }
 header nav ul {
   display: flex;
-  padding-left: 5px;
-  max-width: 600px;
+  width: 500px;
+  margin-left: 100px;
   justify-content: space-between;
 }
 header nav li {
   list-style: none;
   margin-bottom: 8px;
+  padding-top: 13px;
 }
 header nav li a {
   color: black;
