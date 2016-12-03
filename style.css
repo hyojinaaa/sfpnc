@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans');
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
 /*
   Template Name : Society of Philosophy and Culture
   Author: Hyojin Jung
@@ -13,7 +13,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 /********* Header ***********/
 header {
@@ -35,8 +35,8 @@ header nav {
 }
 header nav ul {
   display: flex;
-  width: 500px;
-  margin-left: 100px;
+  width: 400px;
+  margin-left: 300px;
   justify-content: space-between;
 }
 header nav li {
@@ -46,7 +46,7 @@ header nav li {
 }
 header nav li a {
   color: black;
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 header nav li a:hover {
   color: black;
@@ -132,6 +132,9 @@ footer .site-footer {
   margin: 0 auto;
   text-align: center;
 }
+footer .site-footer .uni-links {
+  padding-top: 20px;
+}
 footer .site-footer .uni-links a {
   display: inline-block;
   margin-right: 5px;
@@ -144,17 +147,15 @@ footer .site-footer .links p {
   color: black;
 }
 footer .site-footer .social-network {
-  width: 50px;
+  width: 60px;
   margin: 0 auto;
-  padding-top: 20px;
-  margin-bottom: 10px;
 }
 footer .site-footer .social-network a {
   color: black;
 }
 footer .site-footer .social-network i {
-  margin-right: 3px;
-  margin-left: 3px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 footer .site-footer .social-network i:hover {
   color: #333;
@@ -168,9 +169,5 @@ footer .site-footer hr {
 footer .site-footer strong {
   font-weight: strong;
   font-family: 'Merriweather', serif;
-  font-size: 9px;
-}
-footer .site-footer strong .hyojin {
-  font-size: 9px;
 }
 /*# sourceMappingURL=style.css.map */
