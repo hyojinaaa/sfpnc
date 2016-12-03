@@ -14,7 +14,8 @@
     <!-- site header -->
     <header class="site-header">
 
-      <nav class="site-nav">
+      <nav>
+        <div class="site-nav">
         <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
             <div class='site-logo'>
                 <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
@@ -26,6 +27,7 @@
             </hgroup>
         <?php endif; ?>
         <?php  wp_nav_menu(); ?>
+      </div>
       </nav>
 
     </header><!-- /site header -->
