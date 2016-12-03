@@ -8,12 +8,10 @@
 */
 html {
   margin-top: 0!important;
-  min-height: 100%;
-  /* make sure it is at least as tall as the viewport */
-  position: relative;
 }
 body {
   margin-top: 0;
+  margin-bottom: 0;
   padding-top: 0;
   font-family: 'PT Sans', sans-serif;
 }
@@ -54,30 +52,6 @@ header nav li a:hover {
   color: black;
   text-decoration: underline;
 }
-header .social-network {
-  width: 50px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-header .social-network a {
-  color: black;
-}
-header .social-network i {
-  margin-right: 3px;
-  margin-left: 3px;
-}
-header .social-network i:hover {
-  color: #333;
-}
-header .links a,
-header .links p {
-  font-size: 10px;
-  text-align: center;
-  color: black;
-}
-hr {
-  border-top: 1px solid #333;
-}
 /********* Main ***********/
 .home {
   background-color: black;
@@ -98,13 +72,13 @@ hr {
   font-family: 'Merriweather', serif;
   letter-spacing: 2px;
   padding-top: 100px;
-  margin-left: -150px;
+  padding-bottom: 50px;
 }
 .hero #custom-search-input {
-  margin-right: 200px;
-  width: 200px;
-  border-bottom: solid 1px #E4E4E4;
+  width: 350px;
+  border: solid 1px #E4E4E4;
   background-color: transparent;
+  margin: 0 auto;
 }
 .hero #custom-search-input input {
   box-shadow: none;
@@ -147,5 +121,56 @@ hr {
   width: 30%;
   float: right;
   padding: 50px;
+}
+/********* Site Footer ***********/
+footer {
+  background-color: #ddd;
+  padding-bottom: 20px;
+}
+footer .site-footer {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+footer .site-footer .uni-links a {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+footer .site-footer .links a,
+footer .site-footer .links p {
+  font-size: 10px;
+  text-align: center;
+  color: black;
+}
+footer .site-footer .social-network {
+  width: 50px;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+footer .site-footer .social-network a {
+  color: black;
+}
+footer .site-footer .social-network i {
+  margin-right: 3px;
+  margin-left: 3px;
+}
+footer .site-footer .social-network i:hover {
+  color: #333;
+}
+footer .site-footer hr {
+  border-top: 1px dashed #333;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+footer .site-footer strong {
+  font-weight: strong;
+  font-family: 'Merriweather', serif;
+  font-size: 9px;
+}
+footer .site-footer strong .hyojin {
+  font-size: 9px;
 }
 /*# sourceMappingURL=style.css.map */

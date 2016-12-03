@@ -9,12 +9,11 @@
 
 html {
   margin-top: 0!important;
-  min-height:100%;/* make sure it is at least as tall as the viewport */
-  position:relative;
 }
 
 body {
   margin-top: 0;
+  margin-bottom: 0;
   padding-top: 0;
   font-family: 'PT Sans', sans-serif;
 }
@@ -54,32 +53,6 @@ header {
       }
     }
   }
-  .social-network {
-   width: 50px;
-   margin: 0 auto;
-   margin-bottom: 20px;
-   a {
-     color: black;
-   }
-   i {
-     margin-right: 3px;
-     margin-left: 3px;
-     &:hover {
-       color: #333;
-     }
-   }
-  }
-  .links {
-    a, p {
-      font-size : 10px;
-      text-align: center;
-      color: black;
-    }
-  }
-}
-
-hr {
-  border-top: 1px solid #333;
 }
 
 /********* Main ***********/
@@ -105,14 +78,14 @@ main {
       font-family: 'Merriweather', serif;
       letter-spacing: 2px;
       padding-top: 100px;
-      margin-left: -150px;
+      padding-bottom: 50px;
     }
   }
   #custom-search-input{
-    margin-right: 200px;
-    width: 200px;
-    border-bottom: solid 1px #E4E4E4;
+    width: 350px;
+    border: solid 1px #E4E4E4;
     background-color: transparent;
+    margin: 0 auto;
     input {
       box-shadow: none;
       font-size: 12px;
@@ -156,5 +129,60 @@ main {
     width: 30%;
     float: right;
     padding: 50px;
+  }
+}
+
+/********* Site Footer ***********/
+footer {
+  background-color: #ddd;
+  padding-bottom: 20px;
+  .site-footer {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    .uni-links {
+      a {
+        display: inline-block;
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+    .links {
+    a, p {
+        font-size : 10px;
+        text-align: center;
+        color: black;
+      }
+    }
+    .social-network {
+     width: 50px;
+     margin: 0 auto;
+     padding-top: 20px;
+     margin-bottom: 10px;
+     a {
+       color: black;
+     }
+     i {
+       margin-right: 3px;
+       margin-left: 3px;
+       &:hover {
+         color: #333;
+       }
+     }
+    }
+    hr {
+      border-top: 1px dashed #333;
+      width: 300px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+    strong {
+      font-weight: strong;
+      font-family: 'Merriweather', serif;
+      font-size: 9px;
+      .hyojin {
+        font-size: 9px;
+      }
+    }
   }
 }
