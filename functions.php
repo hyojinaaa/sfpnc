@@ -47,16 +47,18 @@ $args = array(
 add_theme_support( 'custom-header', $args );
 
 // Make my theme suppor widget
-if (function_exists('register_sidebar')) {
+function ourWidgetsInit() {
 
-	register_sidebar(array(
-		'name' => 'Widgetized Area',
-		'id'   => 'widgetized-area',
-		'description'   => 'This is a widgetized area.',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
+	register_sidebar( array(
+		'name' => 'Sidebar',
+		'id' => 'sidebar1',
+		'before_widget' => '<div class="widget-item">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	));
 
+
 }
+
+add_action('widgets_init', 'ourWidgetsInit');

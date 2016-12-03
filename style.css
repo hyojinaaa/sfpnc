@@ -15,40 +15,29 @@ html {
 body {
   margin-top: 0;
   padding-top: 0;
-  display: flex;
   font-family: 'PT Sans', sans-serif;
-  height: 100%;
 }
 /********* Header ***********/
 header {
-  width: 150px;
-  height: 100%;
-  background-color: #D0D0D0;
-  margin-top: 0;
-  padding-bottom: 50px;
-  position: fixed;
-  /* Stay in place */
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding: 10px;
+  background-color: white;
 }
 header .site-logo {
-  width: 130px;
-  padding-top: 20px;
+  width: 200px;
 }
 header .site-logo img {
   width: 100%;
 }
 header nav {
+  display: flex;
   margin: 0 auto;
   margin-top: 30px;
-  width: 130px;
-  margin-bottom: 30px;
+  max-width: 900px;
 }
 header nav ul {
+  display: flex;
   padding-left: 5px;
+  max-width: 600px;
+  justify-content: space-between;
 }
 header nav li {
   list-style: none;
@@ -87,17 +76,6 @@ hr {
   border-top: 1px solid #333;
 }
 /********* Main ***********/
-main {
-  width: 100%;
-  margin-left: 150px;
-  height: 100%;
-  position: fixed;
-  /* Stay in place */
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-}
 .home {
   background-color: black;
 }
@@ -160,10 +138,11 @@ main {
 .seminars .results {
   width: 70%;
   background-color: yellow;
+  padding: 50px;
 }
-.seminars .filter-search {
+.seminars .side-column {
   width: 30%;
-  background-color: red;
-  display: block;
+  float: right;
+  padding: 50px;
 }
 /*# sourceMappingURL=style.css.map */
