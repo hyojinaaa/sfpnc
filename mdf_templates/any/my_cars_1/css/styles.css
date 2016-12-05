@@ -1,0 +1,16 @@
+.previews .thumbnail {
+    background-image: url("../img/bg.png");
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.previews a.pn_fancybox{
+    float:left !important;
+    display: block !important;
+}
+
+.previews .mdf_title_data{
+    height:85px;
+    display: block;
+}
+

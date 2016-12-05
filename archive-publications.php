@@ -8,6 +8,7 @@ get_header();
   <div class="results">
     <h2>Search Results: </h2>
     <div class="search-result">
+      <h2>This is archive seminar page</h2>
       <div id="mdf_output">
         <?php if (have_posts()) :
       while (have_posts()) : the_post(); ?>
