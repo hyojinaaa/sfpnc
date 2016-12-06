@@ -125,13 +125,32 @@ main {
 }
 .seminars .results {
   width: 70%;
-  background-color: yellow;
   padding: 50px;
 }
-.seminars .side-column {
+.seminars .widget {
   width: 30%;
   float: right;
   padding: 50px;
+}
+.seminars article {
+  border: 1px solid #777;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+.seminars article img {
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+}
+.seminars article .entry-title {
+  font-size: 20px;
+  margin-top: 0;
+}
+.seminars article .entry-title a {
+  color: black;
 }
 /********* Site Footer ***********/
 footer {
@@ -180,5 +199,11 @@ footer .site-footer hr {
 footer .site-footer strong {
   font-weight: strong;
   font-family: 'Merriweather', serif;
+}
+/************ Single ***************/
+.blog-single {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */

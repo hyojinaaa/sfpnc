@@ -62,3 +62,12 @@ function ourWidgetsInit() {
 }
 
 add_action('widgets_init', 'ourWidgetsInit');
+
+// Add featured image
+function sfpncBlog_setup() {
+	add_theme_support('post-thumbnails');
+	add_image_size('thumbnail', 350, 700,  array('left', 'top'));
+	add_image_size('poster', 700, 1400, true);
+}
+
+add_action('after_setup_theme', 'sfpncBlog_setup');

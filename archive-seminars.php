@@ -11,14 +11,22 @@ MDTF_SORT_PANEL::mdtf_catalog_ordering();
 
 <main class="seminars">
   <div class="results">
-    <h2>Search Results: </h2>
-    <div class="search-result">
-      <h2>This is archive seminar page</h2>
+
+    <article class="result-sample">
+      <header class="entry-header">
+        <img src="http://placehold.it/300x400" alt="">
+        <h1 class="entry-title">Search Seminars</h1>
+      </header>
+      <div class="entry-summary">
+        Search seminars by the filter search on the sidebar.
+      </div>
+    </article>
+
       <div id="result-container">
 
 
       </div>
-    </div>
+
 
 <?php //if(!defined('ABSPATH')) die('No direct access allowed'); ?>
 <?php
