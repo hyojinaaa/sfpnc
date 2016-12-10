@@ -8,8 +8,11 @@ get_header();
 
 <main class="seminars">
   <div class="results">
-<?php    if (have_posts()) :
-	while (have_posts()) : the_post(); ?>
+<?php  $loop = new WP_Query( array( 'post_type' => 'seminars', 'posts_per_page' => 10 ) ); ?>
+
+<?php while ( $loop->have_posts() ) : $loop->the_post();
+ //if (have_posts()) :
+//	while (have_posts()) : the_post(); ?>
 
   <article>
     <?php  if ( has_post_thumbnail() ) { ?>
@@ -50,7 +53,7 @@ get_header();
 		<a href="<?php the_permalink(); ?>"><p class="post-excerpt"><?php echo get_the_excerpt(); ?></p></a>
   </div>
 </article>
-  <?php endwhile; endif; ?>
+  <?php endwhile; //endif; ?>
       <div id="result-container">
       </div>
 
