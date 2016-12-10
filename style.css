@@ -206,4 +206,58 @@ footer .site-footer strong {
   margin: 0 auto;
   padding: 20px;
 }
+/************ Seminars Search ************/
+#uwpqsf_id {
+  border: none;
+  border-left: 1px solid #aaa;
+  padding-left: 20px;
+}
+#uwpqsf_id form div:nth-of-type(6) {
+  width: 275px;
+  margin-top: 15px;
+}
+#uwpqsf_id .usearchbtn {
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 10px;
+  font-family: 'Merriweather Sans', sans-serif;
+  padding: 7px 20px;
+  letter-spacing: 2px;
+  border: 1px solid black;
+}
+#uwpqsf_id .usearchbtn:hover {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+#uwpqsf_id label {
+  font-size: 12px;
+  color: #838383;
+}
+#uwpqsf_id label input {
+  margin-right: 5px;
+}
+#uwpqsf_id input {
+  border: 1px solid #dddddd;
+  padding: 5px 10px;
+  border-radius: 0;
+  outline: none;
+}
+#uwpqsf_id select {
+  border: none;
+  border: 1px solid #dddddd;
+  padding: 5px 10px;
+  appearance: none;
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  background-image: url(https://www.crcna.org/sites/all/themes/zen_crcna/images/select-arrow@3x.jpg);
+  background-position: right -15px;
+  background-repeat: no-repeat;
+  background-size: 25px 110px;
+  background-color: white;
+  border-radius: 0;
+  outline: none;
+}
 /*# sourceMappingURL=style.css.map */

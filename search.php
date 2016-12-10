@@ -20,22 +20,24 @@ get_header();
       </div>
     </article>
 
-      <div id="result-container">
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      </div>
-
 
   </div>
 
   <div class="widget">
-  <?php echo do_shortcode( ' [ULWPQSF id=69 formtitle="0" divclass=my_own_class] ' );
+  <?php echo do_shortcode( ' [ULWPQSF id=69] ' );
   //get_sidebar(); ?>
   </div>
-
 </main>
+<script type="text/javascript">
+var allArticles = document.querySelectorAll('#result-container article');
+var container = document.querySelector('#result-container');
 
+console.log(container);
+console.log(allArticles);
+
+</script>
 <?php
 get_footer();
 
