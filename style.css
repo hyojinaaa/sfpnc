@@ -10,9 +10,8 @@ html {
   margin-top: 0!important;
 }
 body {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
+  margin: 0;
+  padding: 0;
   font-family: 'Merriweather Sans', sans-serif;
 }
 /********* Header ***********/
@@ -21,6 +20,7 @@ header {
 }
 header .site-logo {
   width: 200px;
+  margin-top: 8px;
 }
 header .site-logo img {
   width: 100%;
@@ -40,6 +40,7 @@ header nav .site-nav {
   max-width: 900px;
   padding: 10px;
   padding-bottom: 0;
+  padding-top: 0;
 }
 header nav ul {
   display: flex;
@@ -49,12 +50,11 @@ header nav ul {
 }
 header nav li {
   list-style: none;
-  margin-bottom: 8px;
-  padding-top: 13px;
 }
 header nav li a {
   color: black;
   font-family: 'Merriweather Sans', sans-serif;
+  text-decoration: none;
 }
 header nav li a:hover {
   color: black;
@@ -62,7 +62,7 @@ header nav li a:hover {
 }
 /********* Main ***********/
 main {
-  padding-top: 91px;
+  padding-top: 60px;
 }
 .home {
   background-color: black;
@@ -120,12 +120,12 @@ main {
 }
 /********* Seminars ***********/
 .seminars {
-  background-color: white;
   display: flex;
 }
 .seminars .results {
   width: 70%;
   padding: 50px;
+  padding-right: 0;
 }
 .seminars .widget {
   width: 30%;
@@ -133,28 +133,30 @@ main {
   padding: 50px;
 }
 .seminars article {
-  border: 1px solid #777;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
   padding: 20px;
+  box-shadow: 2px 2px 2px #ddd;
+  margin-bottom: 20px;
+  display: flex;
+  text-align: left;
 }
-.seminars article img {
-  padding: 20px;
-  width: 300px;
-  height: 400px;
-}
-.seminars article .entry-title {
-  font-size: 20px;
-  margin-top: 0;
-}
-.seminars article .entry-title a {
+.seminars article a {
+  text-decoration: none;
   color: black;
+}
+.seminars article .post-thumbnail {
+  width: 30%;
+}
+.seminars article .post-content {
+  width: 70%;
 }
 /********* Site Footer ***********/
 footer {
-  background-color: #ddd;
+  background-color: #eee;
   padding-bottom: 20px;
 }
 footer .site-footer {
@@ -218,7 +220,7 @@ footer .site-footer strong {
 }
 #uwpqsf_id .usearchbtn {
   border-radius: 10px;
-  background-color: white;
+  background-color: transparent;
   margin-top: 10px;
   font-family: 'Merriweather Sans', sans-serif;
   padding: 7px 20px;
@@ -236,16 +238,18 @@ footer .site-footer strong {
 }
 #uwpqsf_id label input {
   margin-right: 5px;
+  background-color: transparent;
 }
 #uwpqsf_id input {
-  border: 1px solid #dddddd;
+  border: 1px solid #ccc;
   padding: 5px 10px;
   border-radius: 0;
   outline: none;
+  background-color: transparent;
 }
 #uwpqsf_id select {
   border: none;
-  border: 1px solid #dddddd;
+  border: 1px solid #ccc;
   padding: 5px 10px;
   appearance: none;
   -moz-appearance: none;
@@ -256,7 +260,7 @@ footer .site-footer strong {
   background-position: right -15px;
   background-repeat: no-repeat;
   background-size: 25px 110px;
-  background-color: white;
+  background-color: transparent;
   border-radius: 0;
   outline: none;
 }
