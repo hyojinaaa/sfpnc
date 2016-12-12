@@ -7,7 +7,7 @@ get_header();
  ?>
 
 <main class="seminars">
-  <div class="results">
+  <div class="results" id="result-container">
 <?php  $loop = new WP_Query( array( 'post_type' => 'seminars', 'posts_per_page' => 10 ) ); ?>
 
 <?php while ( $loop->have_posts() ) : $loop->the_post();
@@ -54,8 +54,8 @@ get_header();
   </div>
 </article>
   <?php endwhile; //endif; ?>
-      <div id="result-container">
-      </div>
+      <!-- <div>
+      </div> -->
 
 
   </div>
