@@ -9,10 +9,64 @@ get_header(); ?>
  <!-- post-thumbnail -->
 
  <div class="single-text">
+
    <h2 class="single-title"><?php the_title(); ?></h2>
-   <p class="single-info">By <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php echo the_author(); ?></a> / <?php the_time('d.m'); ?></p>
-   <div class="single-image"><?php the_post_thumbnail('poster'); ?></div>
-   <p class="single-content"><?php the_content(); ?></p>
+   <div class="img-with-info">
+     <div class="single-image"><?php the_post_thumbnail('poster'); ?></div>
+     <div class="info">
+       <p class="single-info"><strong>Speakers : </strong><a href="<?php echo the_field('main_speaker_personal_web_link'); ?>"><?php the_field('main_speaker_name'); ?></a>(<?php echo get_the_term_list( $post->ID, 'main_speaker_second_affiliation_'); ?>, <a href="<?php echo the_field('main_speker_d/s_web_link'); ?>"><?php the_field('main_speaker_department_/_school'); ?></a>, <?php echo get_the_term_list( $post->ID, 'main_speaker_uni'); ?>)</p>
+       <?php if( get_field('respondent_1_name') ): ?>
+        <p class="single-info"><strong>Respondent: </strong><a href="<?php echo the_field('respondent_1_personal_web_link'); ?>"><?php the_field('respondent_1_name'); ?></a>(<?php the_field('respondent_1_second_affiliation/title'); ?>, <a href="<?php echo the_field('respondent_1_d/s_web_link'); ?>"><?php the_field('respondent_1_department/school'); ?></a>,  <?php the_field('respondent_1_university'); ?>)<?php endif; ?>,<?php if( get_field('respondent_2_name') ): ?>
+         <a href="<?php echo the_field('respondent_2_personal_web_link'); ?>"><?php the_field('respondent_2_name'); ?></a>(<?php the_field('respondent_2_second_affiliation/title'); ?>, <a href="<?php echo the_field('respondent_2_d/s_web_link'); ?>"><?php the_field('respondent_2_department/school'); ?></a>,  <?php the_field('respondent_2_university'); ?>)<?php endif; ?> </p>
+
+
+
+       <p class="single-info"><strong>Date : </strong><?php the_field("date"); ?></p>
+       <p class="single-info"><strong>Venue : </strong><?php the_field('venue'); ?></p>
+       <p class="single-info"><strong>Series : </strong><?php echo get_the_term_list( $post->ID, 'series'); ?></p>
+       <p class="single-info"><strong>Disciplines : </strong>	<?php
+
+			$categories = get_the_category();
+			$separator = ", ";
+			$output = '';
+
+			if ($categories) {
+
+				foreach ($categories as $category) {
+
+					$output .= '<a href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>'  . $separator;
+
+				}
+
+				echo trim($output, $separator);
+
+			}
+
+			?>
+			</p>
+     </div>
+
+   </div>
+   <div class="single-content"><?php the_content(); ?></div>
+   <div class="content-with-video">
+     <?php the_field('video1'); ?>
+   </div>
+   <div class="content-with-video">
+     <?php the_field('video2'); ?>
+   </div>
+   <div class="content-with-video">
+     <?php the_field('video3'); ?>
+   </div>
+   <div class="content-with-video">
+     <?php the_field('video4'); ?>
+   </div>
+   <div class="content-with-video">
+     <?php the_field('video5'); ?>
+   </div>
+   <div class="content-with-video">
+     <?php the_field('video6'); ?>
+   </div>
+
    <div class="single-tags">
    <?php
    $posttags = get_the_tags();
