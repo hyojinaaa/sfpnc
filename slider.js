@@ -36,20 +36,40 @@
     //console.log(articleArray);
 //});
 
-// $(document).ready(function(){
-//   $.ajax({
-//      url: 'archive-seminars.php',
-// success: function(data){
-// console.log(data);
-//  alert('this alert should only pop up if AJAX is successfully connecting to your PHP file');
-//
-//         // $('#result-container article').html(data);
-//
-//          //slideSwitch();
-//      },
-// error: function(){
-// alert('if this alert shows then AJAX is not connecting to your PHP file correctly');
-// }
-// });
-//
-// });
+$(document).ready(function(){
+
+  $.ajax({
+     url: 'https://api.github.com/repos/vmg/redcarpet/issues?state=closed',
+
+success: function(data){
+console.log(data);
+
+          // Loop over the JSON that comes back from the GitHub links
+
+          // Use the below code to create new article and HTML elements
+
+          // Fill those elements with any data you want from the GitHub data
+
+          // Create new HTML element
+          $article = $('<article>');
+
+          $h1 = $('<h1>');
+
+          // Put data into h1 element (change this to say a name from the GitHub Data)
+          $($h1).html(data.title);
+
+          // Put the h1 into the article
+          $($article).append($h1);
+
+
+          // Put the article into the page
+         $('#result-container').append($article);
+
+         //slideSwitch();
+     },
+error: function(){
+alert('if this alert shows then AJAX is not connecting to your PHP file correctly');
+}
+});
+
+});

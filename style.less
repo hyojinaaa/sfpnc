@@ -74,6 +74,29 @@ main {
     background-color: black;
 }
 
+.main-search {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  input {
+    width: 350px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+  }
+  i {
+    color: white;
+    &:hover {
+      color: grey;
+    }
+  }
+}
+
 /********* Home Page ***********/
 .hero {
   height: 500px;
@@ -235,15 +258,19 @@ footer {
 }
 
 /************ Single ***************/
+
 .blog-single {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
+  .single-text {
+    padding-bottom: 30px;
+  }
   .single-title {
     font-family: 'Merriweather', serif;
     font-size: 32px;
     text-align: center;
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -258,18 +285,42 @@ footer {
     .info {
       width: 60%;
       margin-left: 30px;
+      font-size: 16px;
+      padding-top: 120px;
+      a {
+        color: black;
+      }
     }
     .single-image {
       width: 25%;
       height: auto;
       margin-bottom: 20px;
+      padding-left: 20px;
       img {
         width: 100%;
         height: auto;
       }
     }
+    .no-image-info {
+      padding-top: 0px;
+    }
   }
 
+  .single-tags {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    a {
+      display: inline-block;
+      margin-left: 5px;
+      margin-right: 5px;
+      text-decoration: none;
+      p {
+        color: grey;
+
+      }
+    }
+  }
   .content-with-video {
     display: flex;
     font-size: 14px;
@@ -285,6 +336,18 @@ footer {
     font-size: 14px;
     line-height: 20px;
     color: #484846;
+  }
+}
+
+.single-column {
+  max-width: 700px;
+  margin: 0 auto;
+  iframe {
+    width: 700px;
+    height: 350px;
+  }
+  .single-content {
+    max-width: 700px;
   }
 }
 /************ Seminars Search ************/

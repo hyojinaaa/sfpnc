@@ -67,6 +67,28 @@ main {
 .home {
   background-color: black;
 }
+.main-search {
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.main-search input {
+  width: 350px;
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+}
+.main-search i {
+  color: white;
+}
+.main-search i:hover {
+  color: grey;
+}
 /********* Home Page ***********/
 .hero {
   height: 500px;
@@ -225,11 +247,14 @@ footer .site-footer strong {
   margin: 0 auto;
   padding: 20px;
 }
+.blog-single .single-text {
+  padding-bottom: 30px;
+}
 .blog-single .single-title {
   font-family: 'Merriweather', serif;
   font-size: 32px;
   text-align: center;
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 40px;
@@ -244,15 +269,38 @@ footer .site-footer strong {
 .blog-single .img-with-info .info {
   width: 60%;
   margin-left: 30px;
+  font-size: 16px;
+  padding-top: 120px;
+}
+.blog-single .img-with-info .info a {
+  color: black;
 }
 .blog-single .img-with-info .single-image {
   width: 25%;
   height: auto;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 .blog-single .img-with-info .single-image img {
   width: 100%;
   height: auto;
+}
+.blog-single .img-with-info .no-image-info {
+  padding-top: 0px;
+}
+.blog-single .single-tags {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.blog-single .single-tags a {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+.blog-single .single-tags a p {
+  color: grey;
 }
 .blog-single .content-with-video {
   display: flex;
@@ -269,6 +317,17 @@ footer .site-footer strong {
   font-size: 14px;
   line-height: 20px;
   color: #484846;
+}
+.single-column {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.single-column iframe {
+  width: 700px;
+  height: 350px;
+}
+.single-column .single-content {
+  max-width: 700px;
 }
 /************ Seminars Search ************/
 #uwpqsf_id {
