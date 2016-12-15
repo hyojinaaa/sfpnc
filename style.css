@@ -387,4 +387,54 @@ footer .site-footer strong {
   outline: none;
 }
 /********* Main slide show ***********/
+.slideshow {
+  background-color: white;
+}
+section {
+  width: 800px;
+  padding-left: 300px;
+  padding-top: 50px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+section li {
+  width: 300px;
+  height: 281px;
+  background: #ccc;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+section .items {
+  position: absolute;
+}
+section .main-pos {
+  margin-left: 2em !important;
+  z-index: 3000;
+}
+section .left-pos {
+  opacity: .3;
+  margin-left: -17em !important;
+  z-index: 1000;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+}
+section .right-pos {
+  opacity: .3;
+  margin-left: 21em !important;
+  z-index: 1000;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+}
+section span {
+  position: relative;
+  margin: 0 auto;
+  left: 17em;
+  top: 20em;
+}
 /*# sourceMappingURL=style.css.map */
