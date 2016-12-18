@@ -279,7 +279,7 @@ footer .site-footer strong {
   width: 60%;
   margin-left: 30px;
   font-size: 16px;
-  padding-top: 120px;
+  padding-top: 20px;
 }
 .blog-single .img-with-info .info a {
   color: black;
@@ -336,7 +336,7 @@ footer .site-footer strong {
   height: 350px;
 }
 .single-column .single-content {
-  max-width: 700px;
+  width: 100%;
 }
 /************ Seminars Search ************/
 #uwpqsf_id {

@@ -27,7 +27,11 @@ get_header(); ?>
 
 
     <?php if(get_field("date_and_time") ||  get_field("date")) { ?>
-       <p class="single-info"><strong>Date : </strong><?php if( get_field("date_and_time")){ ?><?php the_field("date_and_time"); ?><?php } else { the_field("date"); }?></p>
+      <?php // get raw date
+        $date_and_time = get_field('date_and_time');
+            // make date object
+        $date_and_time = new DateTime($date_and_time); ?>
+       <p class="single-info"><strong>Date : </strong><?php if(isset($date_and_time)) { echo $date_and_time->format('d M G:ia'); } else { the_field("date"); } ?></p>
     <?php } ?>
 
     <?php if(get_field('venue')) { ?>
