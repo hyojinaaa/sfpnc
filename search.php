@@ -29,25 +29,25 @@ get_header();
             <a href="<?php the_permalink(); ?>" ><h2 class="post-title"><?php echo  $shorttitle ?></h2></a>
 
 
-		<P class="post-info">By <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> | Posted in <?php
+            <P class="post-info">Main Speaker: <?php the_field('main_speaker_name'); ?> | Posted in <?php
 
-			$categories = get_the_category();
-			$separator = ", ";
-			$output = '';
+        			$categories = get_the_category();
+        			$separator = ", ";
+        			$output = '';
 
-			if ($categories) {
+        			if ($categories) {
 
-				foreach ($categories as $category) {
+        				foreach ($categories as $category) {
 
-					$output .= '<a href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>'  . $separator;
+        					$output .= '<span>' . $category->cat_name . '</span>'  . $separator;
 
-				}
+        				}
 
-				echo trim($output, $separator);
+        				echo trim($output, $separator);
 
-			}
+        			}
 
-			?></p>
+        			?></p>
 
 		<a href="<?php the_permalink(); ?>"><p class="post-excerpt"><?php echo get_the_excerpt(); ?></p></a>
   </div>

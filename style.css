@@ -187,12 +187,17 @@ main {
 }
 .seminars article .post-thumbnail {
   width: 30%;
+  height: auto;
   display: flex;
   justify-content: center;
 }
+.seminars article .post-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
 .seminars article .post-content {
   width: 70%;
-  padding: 10px;
+  padding: 20px;
 }
 /********* Site Footer ***********/
 .minus-margin {
@@ -496,5 +501,30 @@ section .poster-hover-con .post-hover .view-more a {
 section .poster-hover-con .post-hover .view-more a:hover {
   background-color: white;
   color: black;
+}
+/*************** About Us ******************/
+#about .hero .hero-text {
+  width: 700px;
+  margin: 0 auto;
+}
+#about .hero .hero-text a {
+  color: white;
+}
+#about .hero .hero-text h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+}
+#about .mail {
+  background: black;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#000000, #ffffff);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#000000, #ffffff);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#000000, #ffffff);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#000000, #ffffff);
+  /* Standard syntax */
 }
 /*# sourceMappingURL=style.css.map */
