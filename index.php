@@ -51,30 +51,54 @@ get_header(); ?>
 	<ul class="carousel">
 		<?php $number = 1; ?>
   <?php while ( $upcoming_query->have_posts() ) : $upcoming_query->the_post(); ?>
-
+		<!-- <i class="fa fa-chevron-left fa-2x" aria-hidden="true" id="prev"></i> -->
   	<!--Your Content-->
+			<?php	$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+	    <li class="items main-pos <?php if($number == 3){?> left-pos<?php } elseif( $number == 2 ) {?> right-pos<?php } ?>" id="<?php echo $number; ?>" style="background-image: url(<?php echo $url ?>)">
 
-	    <li class="items main-pos <?php if($number == 3){?> left-pos<?php } elseif( $number == 2 ) {?> right-pos<?php } ?>" id="<?php echo $number; ?>"><h2><?php the_title(); ?></h2></li>
+
+
+					<div class="poster-hover-con">
+						<div class="post-hover">
+							<?php  $trimtitle = get_the_title();
+
+											$shorttitle = wp_trim_words( $trimtitle, $num_words = 10, $more = '… ' ); ?>
+
+												<a href="<?php the_permalink(); ?>" ><h2><?php echo  $shorttitle ?></h2></a>
+
+
+							<?php // get raw date
+								$date_and_time = get_field('date_and_time');
+										// make date object
+								$date_and_time = new DateTime($date_and_time); ?>
+							<p><?php if(isset($date_and_time)) { echo $date_and_time->format('d M G:ia'); } else { the_field("date"); } ?></p>
+							<p><?php the_field('venue'); ?></p>
+							<p class="view-more" ><a href="<?php the_permalink(); ?>">View More</a></p>
+						</div>
+					</div>
+
+			</li>
 			<?php $number++; ?>
-
+			<!-- <i class="fa fa-chevron-right fa-2x" aria-hidden="true" id="next"></i> -->
   <?php endwhile; ?>
   <!-- end of the loop -->
 </ul>
 <span>
-<input type="button" value="Prev" id="prev">
-<input type="button" value="Next" id="next">
+
+
 </span>
 </section>
   <?php wp_reset_postdata(); ?>
 
 <?php else:  ?>
-  <p><?php _e( 'There are currently no upcoming events, please check back soon.' ); ?></p>
+  <p><?php _e( 'There are currently no upcoming seminars, please check back soon.' ); ?></p>
 <?php endif; ?>
 
 </div>
 
 </main>
-
+<div class="minus-margin">
+</div>
 <?php get_footer();
 
 ?>

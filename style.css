@@ -195,6 +195,9 @@ main {
   padding: 10px;
 }
 /********* Site Footer ***********/
+.minus-margin {
+  margin-top: -150px;
+}
 footer {
   background-color: #eee;
   padding-bottom: 20px;
@@ -388,19 +391,21 @@ footer .site-footer strong {
 }
 /********* Main slide show ***********/
 .slideshow {
-  background-color: white;
+  background-color: black;
+  margin-top: -100px;
 }
 section {
   width: 800px;
-  padding-left: 300px;
+  padding-left: 350px;
   padding-top: 50px;
   height: 600px;
   margin: 0 auto;
   position: relative;
 }
+section .carousel {
+  margin-top: -80px;
+}
 section li {
-  width: 300px;
-  height: 281px;
   background: #ccc;
   display: inline-block;
   -webkit-transition: all 0.3s ease-in-out;
@@ -408,8 +413,17 @@ section li {
   transition: all 0.3s ease-in-out;
   overflow: hidden;
 }
+section li:hover .poster-hover-con {
+  opacity: 1;
+  cursor: pointer;
+}
 section .items {
   position: absolute;
+  width: 300px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 section .main-pos {
   margin-left: 2em !important;
@@ -431,10 +445,56 @@ section .right-pos {
   -moz-transform: scale(0.75);
   transform: scale(0.75);
 }
-section span {
-  position: relative;
-  margin: 0 auto;
-  left: 17em;
-  top: 20em;
+section .poster-hover-con {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  /* vendorless fallback */
+  -o-transition: all 0.3s ease-in-out;
+  /* opera */
+  -ms-transition: all 0.3s ease-in-out;
+  /* IE 10 */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox */
+  -webkit-transition: all 0.3s ease-in-out;
+  /*safari and chrome */
+}
+section .poster-hover-con .post-hover {
+  padding: 40px;
+}
+section .poster-hover-con .post-hover a {
+  text-decoration: none;
+}
+section .poster-hover-con .post-hover h2 {
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+section .poster-hover-con .post-hover p {
+  font-size: 18px;
+  color: white;
+}
+section .poster-hover-con .post-hover p:first-of-type {
+  font-size: 30px;
+}
+section .poster-hover-con .post-hover .view-more {
+  margin-top: 30px;
+}
+section .poster-hover-con .post-hover .view-more a {
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  text-decoration: none;
+  font-size: 14px;
+}
+section .poster-hover-con .post-hover .view-more a:hover {
+  background-color: white;
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */

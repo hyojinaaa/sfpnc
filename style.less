@@ -210,6 +210,10 @@ main {
 }
 
 /********* Site Footer ***********/
+.minus-margin {
+  margin-top: -150px;
+}
+
 footer {
   background-color: #eee;
   padding-bottom: 20px;
@@ -415,28 +419,39 @@ footer {
 
 /********* Main slide show ***********/
 .slideshow {
-  background-color: white;
+  background-color: black;
+  margin-top: -100px;
 }
 
 section {
   width: 800px;
-  padding-left: 300px;
+  padding-left: 350px;
   padding-top: 50px;
   height: 600px;
   margin: 0 auto;
   position: relative;
+  .carousel {
+    margin-top: -80px;
+  }
   li {
-    width: 300px;
-    height: 281px;
     background: #ccc;
     display: inline-block;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     overflow: hidden;
+    &:hover .poster-hover-con {
+      opacity: 1;
+      cursor: pointer
+    }
   }
   .items {
     position: absolute;
+    width: 300px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   .main-pos {
     margin-left: 2em !important;
@@ -460,10 +475,64 @@ section {
     transform: scale(.75);
   }
 
-  span {
-    position: relative;
-    margin: 0 auto;
-    left: 17em;
-    top: 20em;
+// #prev, #next {
+//     position: relative;
+//     margin: 0 auto;
+//     left: 23%;
+//     top: 30em;
+//     i {
+//       color: white;
+//       &:hover {
+//         color: grey;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+  .poster-hover-con {
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; /* vendorless fallback */
+    -o-transition: all 0.3s ease-in-out; /* opera */
+    -ms-transition: all 0.3s ease-in-out; /* IE 10 */
+    -moz-transition: all 0.3s ease-in-out; /* Firefox */
+    -webkit-transition: all 0.3s  ease-in-out; /*safari and chrome */
+    .post-hover {
+      padding: 40px;
+      a {
+        text-decoration: none;
+      }
+      h2 {
+        color: white;
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      p {
+        font-size: 18px;
+        color: white;
+        &:first-of-type {
+          font-size: 30px;
+        }
+      }
+      .view-more {
+        a {
+          border-radius: 5px;
+          color: white;
+          padding: 10px 20px;
+          border: 1px solid white;
+          text-decoration: none;
+          font-size: 14px;
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+        margin-top: 30px;
+      }
+    }
   }
 }
