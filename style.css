@@ -515,16 +515,58 @@ section .poster-hover-con .post-hover .view-more a:hover {
   line-height: 48px;
   font-weight: bold;
 }
-#about .mail {
-  background: black;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#000000, #ffffff);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#000000, #ffffff);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#000000, #ffffff);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#000000, #ffffff);
-  /* Standard syntax */
+#about .mail-con {
+  padding: 30px;
+}
+#about .mail-con p {
+  font-size: 15px;
+}
+#about .mail-con .mail {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+#about .mail-con .mail .mc_custom_border_hdr {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-family: 'Merriweather', serif;
+}
+#about .mail-con .mail #mc-indicates-required {
+  display: none;
+}
+#about .mail-con .mail label {
+  color: grey;
+  font-size: 12px;
+}
+#about .mail-con .mail .mc_input {
+  width: 400px;
+  margin: 0 auto;
+  height: 30px;
+  margin-top: 10px;
+  outline: none;
+  padding-left: 10px;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+#about .mail-con .mail #mc_mv_EMAIL {
+  margin-right: 24px;
+}
+#about .mail-con .mail .mc_signup_submit {
+  margin-top: 20px;
+}
+#about .mail-con .mail .mc_signup_submit #mc_signup_submit {
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  background-color: transparent;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+#about .mail-con .mail .mc_signup_submit #mc_signup_submit:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+#about .mail-con .mail #mc_display_rewards {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

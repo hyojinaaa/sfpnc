@@ -558,11 +558,59 @@ section {
       }
     }
   }
-  .mail {
-    background: black; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(black, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(black, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(black, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(black, white); /* Standard syntax */
+  .mail-con {
+    padding: 30px;
+    p {
+      font-size: 15px;
+    }
+    .mail {
+      width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      .mc_custom_border_hdr {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        font-family: 'Merriweather', serif;
+      }
+
+      #mc-indicates-required {
+        display: none;
+      }
+      label {
+        color: grey;
+        font-size: 12px;
+      }
+      .mc_input {
+        width: 400px;
+        margin: 0 auto;
+        height: 30px;
+        margin-top: 10px;
+        outline: none;
+        padding-left: 10px;
+        font-family: 'Merriweather Sans', sans-serif;
+      }
+      #mc_mv_EMAIL {
+        margin-right: 24px;
+      }
+      .mc_signup_submit {
+        margin-top: 20px;
+        #mc_signup_submit {
+          font-size: 12px;
+          border: 1px solid black;
+          border-radius: 5px;
+          padding: 10px 25px;
+          background-color: transparent;
+          font-family: 'Merriweather Sans', sans-serif;
+          &:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+      #mc_display_rewards {
+        display: none;
+      }
+    }
   }
 }
