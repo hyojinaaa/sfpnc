@@ -548,6 +548,10 @@ section {
     .hero-text {
       width: 700px;
       margin: 0 auto;
+      p {
+        font-size: 15px;
+        line-height: 22px;
+      }
       a {
         color: white;
       }
@@ -562,6 +566,7 @@ section {
     padding: 30px;
     p {
       font-size: 15px;
+      line-height: 22px;
     }
     .mail {
       width: 700px;
@@ -572,7 +577,12 @@ section {
         margin-bottom: 10px;
         font-family: 'Merriweather', serif;
       }
-
+      .contact {
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+        margin-bottom: 0;
+        margin-top: 40px;
+      }
       #mc-indicates-required {
         display: none;
       }
@@ -610,6 +620,59 @@ section {
       }
       #mc_display_rewards {
         display: none;
+      }
+      .wpcf7-form {
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        input {
+          width: 400px;
+          margin: 0 auto;
+          height: 30px;
+          margin-top: 10px;
+          outline: none;
+          padding-left: 10px;
+          font-family: 'Merriweather Sans', sans-serif;
+          margin-right: 110px;
+        }
+        .wpcf7-email {
+          margin-right: 133px;
+        }
+        .subject {
+          input {
+            margin-right: 88px;
+          }
+        }
+        textarea {
+          width: 400px;
+          margin: 0 auto;
+          margin-top: 10px;
+          outline: none;
+          padding-left: 10px;
+          font-family: 'Merriweather Sans', sans-serif;
+          margin-right: 97px;
+          border: 1px solid #ddd;
+        }
+        br {
+          display: none;
+        }
+        p {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+        .wpcf7-submit {
+          font-size: 12px;
+          border: 1px solid black;
+          border-radius: 5px;
+          background-color: transparent;
+          font-family: 'Merriweather Sans', sans-serif;
+          width: 100px;
+          &:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+          }
+        }
       }
     }
   }

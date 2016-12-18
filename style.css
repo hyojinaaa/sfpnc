@@ -507,6 +507,10 @@ section .poster-hover-con .post-hover .view-more a:hover {
   width: 700px;
   margin: 0 auto;
 }
+#about .hero .hero-text p {
+  font-size: 15px;
+  line-height: 22px;
+}
 #about .hero .hero-text a {
   color: white;
 }
@@ -520,6 +524,7 @@ section .poster-hover-con .post-hover .view-more a:hover {
 }
 #about .mail-con p {
   font-size: 15px;
+  line-height: 22px;
 }
 #about .mail-con .mail {
   width: 700px;
@@ -530,6 +535,12 @@ section .poster-hover-con .post-hover .view-more a:hover {
   margin-top: 40px;
   margin-bottom: 10px;
   font-family: 'Merriweather', serif;
+}
+#about .mail-con .mail .contact {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 40px;
 }
 #about .mail-con .mail #mc-indicates-required {
   display: none;
@@ -568,5 +579,56 @@ section .poster-hover-con .post-hover .view-more a:hover {
 }
 #about .mail-con .mail #mc_display_rewards {
   display: none;
+}
+#about .mail-con .mail .wpcf7-form {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+#about .mail-con .mail .wpcf7-form input {
+  width: 400px;
+  margin: 0 auto;
+  height: 30px;
+  margin-top: 10px;
+  outline: none;
+  padding-left: 10px;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin-right: 110px;
+}
+#about .mail-con .mail .wpcf7-form .wpcf7-email {
+  margin-right: 133px;
+}
+#about .mail-con .mail .wpcf7-form .subject input {
+  margin-right: 88px;
+}
+#about .mail-con .mail .wpcf7-form textarea {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 10px;
+  outline: none;
+  padding-left: 10px;
+  font-family: 'Merriweather Sans', sans-serif;
+  margin-right: 97px;
+  border: 1px solid #ddd;
+}
+#about .mail-con .mail .wpcf7-form br {
+  display: none;
+}
+#about .mail-con .mail .wpcf7-form p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#about .mail-con .mail .wpcf7-form .wpcf7-submit {
+  font-size: 12px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: 'Merriweather Sans', sans-serif;
+  width: 100px;
+}
+#about .mail-con .mail .wpcf7-form .wpcf7-submit:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
