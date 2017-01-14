@@ -215,6 +215,12 @@ main {
   }
 }
 
+#poster-slideshow {
+  .responsive(@phone, {
+    display: none;
+  });
+}
+
 /********* Seminars ***********/
 .seminars {
   display: flex;
@@ -499,6 +505,11 @@ section {
   height: 600px;
   margin: 0 auto;
   position: relative;
+  .responsive(@tablet, {
+    width: 90%;
+    padding-left: 0;
+    height: 500px;
+  });
   .carousel {
     margin-top: -80px;
   }
@@ -521,10 +532,17 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    .responsive(@tablet, {
+      width: 200px;
+      height: 350px;
+    });
   }
   .main-pos {
     margin-left: 2em !important;
     z-index: 3000;
+    .responsive(@tablet, {
+      margin-left: 13em !important;
+    });
   }
   .left-pos {
     opacity: .3;
@@ -533,6 +551,9 @@ section {
     -webkit-transform: scale(.75);
     -moz-transform: scale(.75);
     transform: scale(.75);
+    .responsive(@tablet, {
+      margin-left: -1em !important;
+    });
   }
 
   .right-pos {
@@ -542,6 +563,9 @@ section {
     -webkit-transform: scale(.75);
     -moz-transform: scale(.75);
     transform: scale(.75);
+    .responsive(@tablet, {
+      margin-left: 27em !important;
+    });
   }
 
 // #prev, #next {

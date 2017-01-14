@@ -206,6 +206,11 @@ main {
 .hero #custom-search-input .glyphicon-search {
   font-size: 15px;
 }
+@media only screen and (max-width: 767px) {
+  #poster-slideshow {
+    display: none;
+  }
+}
 /********* Seminars ***********/
 .seminars {
   display: flex;
@@ -472,6 +477,13 @@ section {
   margin: 0 auto;
   position: relative;
 }
+@media only screen and (max-width: 1023px) {
+  section {
+    width: 90%;
+    padding-left: 0;
+    height: 500px;
+  }
+}
 section .carousel {
   margin-top: -80px;
 }
@@ -495,9 +507,20 @@ section .items {
   background-position: center;
   background-size: cover;
 }
+@media only screen and (max-width: 1023px) {
+  section .items {
+    width: 200px;
+    height: 350px;
+  }
+}
 section .main-pos {
   margin-left: 2em !important;
   z-index: 3000;
+}
+@media only screen and (max-width: 1023px) {
+  section .main-pos {
+    margin-left: 13em !important;
+  }
 }
 section .left-pos {
   opacity: .3;
@@ -507,6 +530,11 @@ section .left-pos {
   -moz-transform: scale(0.75);
   transform: scale(0.75);
 }
+@media only screen and (max-width: 1023px) {
+  section .left-pos {
+    margin-left: -1em !important;
+  }
+}
 section .right-pos {
   opacity: .3;
   margin-left: 21em !important;
@@ -514,6 +542,11 @@ section .right-pos {
   -webkit-transform: scale(0.75);
   -moz-transform: scale(0.75);
   transform: scale(0.75);
+}
+@media only screen and (max-width: 1023px) {
+  section .right-pos {
+    margin-left: 27em !important;
+  }
 }
 section .poster-hover-con {
   text-align: center;

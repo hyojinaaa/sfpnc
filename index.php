@@ -19,7 +19,7 @@ get_header(); ?>
 		 </div>
 	</div>
 </div>
-<?php /*
+
 <div class="slideshow">
 	<?php
 	//Set server timezone to central
@@ -47,11 +47,11 @@ get_header(); ?>
 ?>
 <?php if ( $upcoming_query->have_posts() ) : ?>
   <!-- the loop -->
-	<section>
+	<section id="poster-slideshow">
 	<ul class="carousel">
 		<?php $number = 1; ?>
   <?php while ( $upcoming_query->have_posts() ) : $upcoming_query->the_post(); ?>
-		<!-- <i class="fa fa-chevron-left fa-2x" aria-hidden="true" id="prev"></i> -->
+
   	<!--Your Content-->
 			<?php	$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 	    <li class="items main-pos <?php if($number == 3){?> left-pos<?php } elseif( $number == 2 ) {?> right-pos<?php } ?>" id="<?php echo $number; ?>" style="background-image: url(<?php echo $url ?>)">
@@ -94,7 +94,7 @@ get_header(); ?>
   <p><?php _e( 'There are currently no upcoming seminars, please check back soon.' ); ?></p>
 <?php endif; ?>
 
-</div> */ ?>
+</div>
 
 </main>
 <div class="minus-margin">
