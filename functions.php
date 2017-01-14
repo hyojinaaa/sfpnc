@@ -34,10 +34,10 @@ function themeslug_theme_customizer( $wp_customize ) {
 add_action( 'customize_register', 'themeslug_theme_customizer' );
 
 //Remove margin top 32px
-function remove_admin_login_header() {
-    remove_action('wp_head', '_admin_bar_bump_cb');
-}
-add_action('get_header', 'remove_admin_login_header');
+// function remove_admin_login_header() {
+//     remove_action('wp_head', '_admin_bar_bump_cb');
+// }
+// add_action('get_header', 'remove_admin_login_header');
 
 //Add customer header
 $args = array(

@@ -6,6 +6,8 @@
   Author URI : jinawebdev.com
   Version: 1.0
 */
+/* SCREEN SIZES */
+/* MEDIA QUERY FUNCTION */
 html {
   margin-top: 0!important;
 }
@@ -18,9 +20,24 @@ body {
 header {
   background-color: white;
 }
+@media only screen and (max-width: 767px) {
+  header {
+    width: 100%;
+  }
+}
 header .site-logo {
   width: 200px;
   margin-top: 8px;
+}
+@media only screen and (max-width: 1023px) {
+  header .site-logo {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header .site-logo {
+    display: none;
+  }
 }
 header .site-logo img {
   width: 100%;
@@ -36,17 +53,38 @@ header nav {
 header nav .site-nav {
   display: flex;
   margin: 0 auto;
-  margin-top: 30px;
   max-width: 900px;
   padding: 10px;
   padding-bottom: 0;
   padding-top: 0;
+}
+@media only screen and (max-width: 1023px) {
+  header nav .site-nav {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header nav .menu-mainmenu-container {
+    margin: 0 auto;
+  }
 }
 header nav ul {
   display: flex;
   width: 400px;
   margin-left: 300px;
   justify-content: space-between;
+}
+@media only screen and (max-width: 1023px) {
+  header nav ul {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  header nav ul {
+    width: 300px;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 header nav li {
   list-style: none;
@@ -56,13 +94,18 @@ header nav li a {
   font-family: 'Merriweather Sans', sans-serif;
   text-decoration: none;
 }
+@media only screen and (max-width: 767px) {
+  header nav li a {
+    font-size: 14px;
+  }
+}
 header nav li a:hover {
   color: black;
   text-decoration: underline;
 }
 /********* Main ***********/
 main {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 .home {
   background-color: black;

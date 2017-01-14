@@ -19,7 +19,7 @@ get_header(); ?>
 		 </div>
 	</div>
 </div>
-
+<?php /*
 <div class="slideshow">
 	<?php
 	//Set server timezone to central
@@ -94,7 +94,7 @@ get_header(); ?>
   <p><?php _e( 'There are currently no upcoming seminars, please check back soon.' ); ?></p>
 <?php endif; ?>
 
-</div>
+</div> */ ?>
 
 </main>
 <div class="minus-margin">

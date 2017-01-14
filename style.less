@@ -8,6 +8,25 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
 
+//@desktop:   ~"only screen and (min-width: 960px) and (max-width: 1199px)";
+//@tablet:    ~"only screen and (min-width: 720px) and (max-width: 959px)";
+
+/* SCREEN SIZES */
+@phone:       767px; //smaller than 768
+@phone-font-size-base:     12px;
+@tablet:      1023px; //smaller than 1024
+
+/* MEDIA QUERY FUNCTION */
+.responsive(@maxWidth; @rules) {
+  @media only screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}
+
+.responsive(@phone, {
+
+  });
+
 html {
   margin-top: 0!important;
 }
@@ -20,7 +39,18 @@ body {
 /********* Header ***********/
 header {
   background-color: white;
+
+  .responsive(@phone, {
+    width: 100%;
+  });
+
   .site-logo {
+    .responsive(@tablet, {
+      width: 150px;
+    });
+    .responsive(@phone, {
+      display: none;
+    });
     width: 200px;
     margin-top: 8px;
     img {
@@ -37,17 +67,33 @@ header {
     .site-nav {
       display: flex;
       margin: 0 auto;
-      margin-top: 30px;
+      //margin-top: 30px;
       max-width: 900px;
       padding: 10px;
       padding-bottom: 0;
       padding-top: 0;
+      .responsive(@tablet, {
+        max-width: 600px;
+      });
+    }
+    .menu-mainmenu-container {
+      .responsive(@phone, {
+       margin: 0 auto;
+      });
     }
     ul {
       display: flex;
       width: 400px;
       margin-left: 300px;
       justify-content: space-between;
+      .responsive(@tablet, {
+        margin-left: 20px;
+      });
+      .responsive(@phone, {
+        width: 300px;
+        margin-left: 0;
+        padding-left: 0;
+      });
     }
     li {
       list-style: none;
@@ -55,6 +101,9 @@ header {
         color: black;
         font-family: 'Merriweather Sans', sans-serif;
         text-decoration: none;
+        .responsive(@phone, {
+          font-size: 14px;
+        });
         &:hover {
           color: black;
           text-decoration: underline;
@@ -67,7 +116,7 @@ header {
 /********* Main ***********/
 
 main {
-  padding-top: 60px // Fixed navigation
+  padding-top: 50px // Fixed navigation
 }
 
 .home {
