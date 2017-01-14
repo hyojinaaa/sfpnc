@@ -116,6 +116,11 @@ main {
   border: 1px solid white;
   border-radius: 10px;
 }
+@media only screen and (max-width: 767px) {
+  .main-search {
+    width: 80%;
+  }
+}
 .main-search input {
   width: 350px;
   height: 35px;
@@ -125,6 +130,11 @@ main {
   font-size: 18px;
   letter-spacing: 2px;
   outline: none;
+}
+@media only screen and (max-width: 767px) {
+  .main-search input {
+    width: 200px;
+  }
 }
 .main-search i {
   color: white;
@@ -141,6 +151,11 @@ main {
   overflow: hidden;
   color: white;
 }
+@media only screen and (max-width: 767px) {
+  .hero {
+    height: 300px;
+  }
+}
 .hero .hero-text {
   text-align: center;
 }
@@ -150,6 +165,13 @@ main {
   letter-spacing: 2px;
   padding-top: 100px;
   padding-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .hero .hero-text h1 {
+    padding-top: 30px;
+    font-size: 24px;
+    padding-bottom: 0;
+  }
 }
 .hero #custom-search-input {
   width: 350px;

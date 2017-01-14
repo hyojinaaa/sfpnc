@@ -129,6 +129,9 @@ main {
   margin: 0 auto;
   border: 1px solid white;
   border-radius: 10px;
+  .responsive(@phone, {
+    width: 80%;
+  });
   input {
     width: 350px;
     height: 35px;
@@ -138,6 +141,9 @@ main {
     font-size: 18px;
     letter-spacing: 2px;
     outline: none;
+    .responsive(@phone, {
+      width: 200px;
+    });
   }
   i {
     color: white;
@@ -154,7 +160,10 @@ main {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-    color: white;
+  color: white;
+  .responsive(@phone, {
+    height: 300px;
+  });
   .hero-text {
     text-align: center;
     h1 {
@@ -163,6 +172,11 @@ main {
       letter-spacing: 2px;
       padding-top: 100px;
       padding-bottom: 50px;
+      .responsive(@phone, {
+        padding-top: 30px;
+        font-size: 24px;
+        padding-bottom: 0;
+      });
     }
   }
   #custom-search-input{
@@ -170,6 +184,7 @@ main {
     border: solid 1px #E4E4E4;
     background-color: transparent;
     margin: 0 auto;
+
     input {
       box-shadow: none;
       font-size: 12px;
