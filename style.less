@@ -376,8 +376,14 @@ footer {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
+  .responsive(@phone, {
+    width: 87%;
+  });
   .single-text {
     padding-bottom: 30px;
+    .responsive(@phone, {
+      padding-bottom: 0;
+    });
   }
   .single-title {
     font-family: 'Merriweather', serif;
@@ -388,7 +394,7 @@ footer {
     margin-top: 30px;
     margin-bottom: 40px;
     .responsive(@phone, {
-      margin-bottom: 0;
+      margin-bottom: 20px;
     });
   }
   .second-title {
@@ -439,6 +445,9 @@ footer {
     width: 500px;
     margin: 0 auto;
     text-align: center;
+    .responsive(@phone, {
+      width: 100%;
+    });
     a {
       display: inline-block;
       margin-left: 5px;
@@ -455,8 +464,29 @@ footer {
     font-size: 14px;
     line-height: 20px;
     color: #484846;
+    .responsive(@tablet, {
+      flex-direction: column-reverse;
+    });
     p {
       padding: 10px;
+      .responsive(@tablet, {
+        width: 98%;
+        padding-right: 20px;
+      });
+      .responsive(@phone, {
+        margin-top: 0;
+        margin-bottom: 0;
+      });
+      iframe {
+        .responsive(@tablet, {
+          width: 98%;
+          height: 350px;
+          padding-right: 20px;
+        });
+        .responsive(@phone, {
+          height: 200px;
+        });
+      }
     }
   }
   .single-content {
@@ -465,6 +495,10 @@ footer {
     font-size: 14px;
     line-height: 20px;
     color: #484846;
+    .responsive(@tablet, {
+      width: 98%;
+      padding-right: 20px;
+    });
     .responsive(@phone, {
       padding-left: 0;
     });
@@ -478,7 +512,7 @@ footer {
     width: 700px;
     height: 350px;
     .responsive(@phone, {
-      width: 100%;
+      width: 10%;
       height: 200px;
     });
   }

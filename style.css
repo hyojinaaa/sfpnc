@@ -379,8 +379,18 @@ footer .site-footer strong {
   margin: 0 auto;
   padding: 20px;
 }
+@media only screen and (max-width: 767px) {
+  .blog-single {
+    width: 87%;
+  }
+}
 .blog-single .single-text {
   padding-bottom: 30px;
+}
+@media only screen and (max-width: 767px) {
+  .blog-single .single-text {
+    padding-bottom: 0;
+  }
 }
 .blog-single .single-title {
   font-family: 'Merriweather', serif;
@@ -393,7 +403,7 @@ footer .site-footer strong {
 }
 @media only screen and (max-width: 767px) {
   .blog-single .single-title {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 .blog-single .second-title {
@@ -449,6 +459,11 @@ footer .site-footer strong {
   margin: 0 auto;
   text-align: center;
 }
+@media only screen and (max-width: 767px) {
+  .blog-single .single-tags {
+    width: 100%;
+  }
+}
 .blog-single .single-tags a {
   display: inline-block;
   margin-left: 5px;
@@ -464,8 +479,37 @@ footer .site-footer strong {
   line-height: 20px;
   color: #484846;
 }
+@media only screen and (max-width: 1023px) {
+  .blog-single .content-with-video {
+    flex-direction: column-reverse;
+  }
+}
 .blog-single .content-with-video p {
   padding: 10px;
+}
+@media only screen and (max-width: 1023px) {
+  .blog-single .content-with-video p {
+    width: 98%;
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .blog-single .content-with-video p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .blog-single .content-with-video p iframe {
+    width: 98%;
+    height: 350px;
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .blog-single .content-with-video p iframe {
+    height: 200px;
+  }
 }
 .blog-single .single-content {
   width: 530px;
@@ -473,6 +517,12 @@ footer .site-footer strong {
   font-size: 14px;
   line-height: 20px;
   color: #484846;
+}
+@media only screen and (max-width: 1023px) {
+  .blog-single .single-content {
+    width: 98%;
+    padding-right: 20px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .blog-single .single-content {
@@ -489,7 +539,7 @@ footer .site-footer strong {
 }
 @media only screen and (max-width: 767px) {
   .single-column iframe {
-    width: 100%;
+    width: 10%;
     height: 200px;
   }
 }
