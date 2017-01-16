@@ -487,6 +487,12 @@ footer .site-footer strong {
   width: 700px;
   height: 350px;
 }
+@media only screen and (max-width: 767px) {
+  .single-column iframe {
+    width: 100%;
+    height: 200px;
+  }
+}
 .single-column .single-content {
   width: 100%;
 }
