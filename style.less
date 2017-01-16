@@ -321,6 +321,9 @@ main {
 footer {
   background-color: #eee;
   padding-bottom: 20px;
+  .responsive(@tablet, {
+    margin-top: 30px;
+  });
   .site-footer {
     max-width: 900px;
     margin: 0 auto;
@@ -384,19 +387,30 @@ footer {
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 40px;
+    .responsive(@phone, {
+      margin-bottom: 0;
+    });
   }
   .second-title {
     color: grey;
     font-size: 20px;
+
   }
   .img-with-info {
     display: flex;
-
+    .responsive(@phone, {
+      flex-direction: column;
+    });
     .info {
       width: 60%;
       margin-left: 30px;
       font-size: 16px;
       padding-top: 20px;
+      .responsive(@phone, {
+        width: 100%;
+        margin-left: 0;
+        padding-top: 0;
+      });
       a {
         color: black;
       }
@@ -406,6 +420,11 @@ footer {
       height: auto;
       margin-bottom: 20px;
       padding-left: 20px;
+      .responsive(@phone, {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 0;
+      });
       img {
         width: 100%;
         height: auto;
@@ -446,6 +465,9 @@ footer {
     font-size: 14px;
     line-height: 20px;
     color: #484846;
+    .responsive(@phone, {
+      padding-left: 0;
+    });
   }
 }
 
