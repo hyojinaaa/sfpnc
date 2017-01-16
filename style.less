@@ -215,11 +215,6 @@ main {
   }
 }
 
-#poster-slideshow {
-  .responsive(@phone, {
-    display: none;
-  });
-}
 
 /********* Seminars ***********/
 .seminars {
@@ -287,6 +282,9 @@ main {
 /********* Site Footer ***********/
 .minus-margin {
   margin-top: -150px;
+  .responsive(@phone, {
+    margin-top: 0;
+  });
 }
 
 footer {
@@ -510,8 +508,15 @@ section {
     padding-left: 0;
     height: 500px;
   });
+  .responsive(@phone, {
+    height: auto;
+  });
   .carousel {
     margin-top: -80px;
+    .responsive(@phone, {
+      padding-left: 0;
+      text-align: center;
+    });
   }
   li {
     background: #ccc;
@@ -520,6 +525,9 @@ section {
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     overflow: hidden;
+    .responsive(@phone, {
+      margin-bottom: 20px;
+    });
     &:hover .poster-hover-con {
       opacity: 1;
       cursor: pointer
@@ -536,12 +544,18 @@ section {
       width: 200px;
       height: 350px;
     });
+    .responsive(@phone, {
+      position: relative;
+    });
   }
   .main-pos {
     margin-left: 2em !important;
     z-index: 3000;
     .responsive(@tablet, {
       margin-left: 13em !important;
+    });
+    .responsive(@phone, {
+      margin-left: 0 !important;
     });
   }
   .left-pos {
@@ -554,6 +568,13 @@ section {
     .responsive(@tablet, {
       margin-left: -1em !important;
     });
+    .responsive(@phone, {
+      margin-left: 0 !important;
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      transform: scale(1);
+    });
   }
 
   .right-pos {
@@ -565,6 +586,13 @@ section {
     transform: scale(.75);
     .responsive(@tablet, {
       margin-left: 27em !important;
+    });
+    .responsive(@phone, {
+      margin-left: 0 !important;
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      transform: scale(1);
     });
   }
 

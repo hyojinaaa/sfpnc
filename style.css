@@ -206,11 +206,6 @@ main {
 .hero #custom-search-input .glyphicon-search {
   font-size: 15px;
 }
-@media only screen and (max-width: 767px) {
-  #poster-slideshow {
-    display: none;
-  }
-}
 /********* Seminars ***********/
 .seminars {
   display: flex;
@@ -272,6 +267,11 @@ main {
 /********* Site Footer ***********/
 .minus-margin {
   margin-top: -150px;
+}
+@media only screen and (max-width: 767px) {
+  .minus-margin {
+    margin-top: 0;
+  }
 }
 footer {
   background-color: #eee;
@@ -484,8 +484,19 @@ section {
     height: 500px;
   }
 }
+@media only screen and (max-width: 767px) {
+  section {
+    height: auto;
+  }
+}
 section .carousel {
   margin-top: -80px;
+}
+@media only screen and (max-width: 767px) {
+  section .carousel {
+    padding-left: 0;
+    text-align: center;
+  }
 }
 section li {
   background: #ccc;
@@ -494,6 +505,11 @@ section li {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+}
+@media only screen and (max-width: 767px) {
+  section li {
+    margin-bottom: 20px;
+  }
 }
 section li:hover .poster-hover-con {
   opacity: 1;
@@ -513,6 +529,11 @@ section .items {
     height: 350px;
   }
 }
+@media only screen and (max-width: 767px) {
+  section .items {
+    position: relative;
+  }
+}
 section .main-pos {
   margin-left: 2em !important;
   z-index: 3000;
@@ -520,6 +541,11 @@ section .main-pos {
 @media only screen and (max-width: 1023px) {
   section .main-pos {
     margin-left: 13em !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section .main-pos {
+    margin-left: 0 !important;
   }
 }
 section .left-pos {
@@ -535,6 +561,15 @@ section .left-pos {
     margin-left: -1em !important;
   }
 }
+@media only screen and (max-width: 767px) {
+  section .left-pos {
+    margin-left: 0 !important;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
 section .right-pos {
   opacity: .3;
   margin-left: 21em !important;
@@ -546,6 +581,15 @@ section .right-pos {
 @media only screen and (max-width: 1023px) {
   section .right-pos {
     margin-left: 27em !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  section .right-pos {
+    margin-left: 0 !important;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
   }
 }
 section .poster-hover-con {

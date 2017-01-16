@@ -46,8 +46,9 @@ get_header(); ?>
 	//var_dump($upcoming_query);
 ?>
 <?php if ( $upcoming_query->have_posts() ) : ?>
+
   <!-- the loop -->
-	<section id="poster-slideshow">
+	<section>
 	<ul class="carousel">
 		<?php $number = 1; ?>
   <?php while ( $upcoming_query->have_posts() ) : $upcoming_query->the_post(); ?>
@@ -55,8 +56,6 @@ get_header(); ?>
   	<!--Your Content-->
 			<?php	$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 	    <li class="items main-pos <?php if($number == 3){?> left-pos<?php } elseif( $number == 2 ) {?> right-pos<?php } ?>" id="<?php echo $number; ?>" style="background-image: url(<?php echo $url ?>)">
-
-
 
 					<div class="poster-hover-con">
 						<div class="post-hover">
@@ -78,6 +77,7 @@ get_header(); ?>
 					</div>
 
 			</li>
+
 			<?php $number++; ?>
 			<!-- <i class="fa fa-chevron-right fa-2x" aria-hidden="true" id="next"></i> -->
   <?php endwhile; ?>
@@ -88,6 +88,9 @@ get_header(); ?>
 
 </span>
 </section>
+
+
+
   <?php wp_reset_postdata(); ?>
 
 <?php else:  ?>
