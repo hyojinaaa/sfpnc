@@ -2,12 +2,12 @@
 
 function sopcResources() {
   wp_enqueue_script('jquery.min', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js');
-  wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.0.1', true );
-  wp_enqueue_script( 'bootstrap-js');
+  //wp_register_script( 'bootstrap-js', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.0.1', true );
+  //wp_enqueue_script( 'bootstrap-js');
   wp_enqueue_script( 'slider', get_template_directory_uri() . '/slider.js');
 
-  wp_enqueue_style( 'bootstrap-css' );
-  wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', array(), '3.0.1', 'all' );
+  //wp_enqueue_style( 'bootstrap-css' );
+  //wp_register_style( 'bootstrap-css', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', array(), '3.0.1', 'all' );
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
   wp_enqueue_style('style', get_stylesheet_uri());
 }

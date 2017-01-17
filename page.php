@@ -16,7 +16,7 @@ get_header(); ?>
   <div class="mail-con">
     <div class="mail">
         <p>We welcome new members to the Society. Anyone is eligible to join. Please go here to join up to the Victoria University mailing list, and here to join the McMaster University mailing list.</p>
-        <?php mailchimpSF_signup_form(); ?>
+        <?php //ÍmailchimpSF_signup_form(); ?>
 
         <h2 class="contact">Contact Us</h2>
         <?php echo do_shortcode('[contact-form-7 id="84" title="Contact form 1"]'); ?>

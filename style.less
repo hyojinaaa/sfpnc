@@ -754,13 +754,30 @@ section {
 
 /*************** About Us ******************/
 #about {
+  .responsive(@tablet, {
+    overflow-x: hidden;
+  });
+  .responsive(@phone, {
+    width: 100%;
+    });
   .hero {
+    .responsive(@phone, {
+      height: 580px;
+    });
     .hero-text {
       width: 700px;
       margin: 0 auto;
+      .responsive(@phone, {
+        width: 100%;
+        margin-right: 0;
+      });
       p {
         font-size: 15px;
         line-height: 22px;
+        .responsive(@phone, {
+          padding-left: 20px;
+          padding-right: 20px;
+        });
       }
       a {
         color: white;
@@ -769,19 +786,36 @@ section {
         font-size: 40px;
         line-height: 48px;
         font-weight: bold;
+        .responsive(@phone, {
+          font-size: 32px;
+          line-height: 38px;
+          padding-left: 20px;
+          padding-right: 20px;
+        });
       }
     }
   }
   .mail-con {
     padding: 30px;
+    .responsive(@phone, {
+      width: 100%;
+      padding: 0;
+    });
     p {
       font-size: 15px;
       line-height: 22px;
+      .responsive(@phone, {
+        padding-left: 20px;
+        padding-right: 20px;
+      });
     }
     .mail {
       width: 700px;
       margin: 0 auto;
       text-align: center;
+      .responsive(@phone, {
+        width: 100%;
+      });
       .mc_custom_border_hdr {
         margin-top: 40px;
         margin-bottom: 10px;
@@ -835,6 +869,9 @@ section {
         width: 800px;
         display: flex;
         flex-direction: column;
+        .responsive(@phone, {
+          width: 100%;
+          });
         input {
           width: 400px;
           margin: 0 auto;
@@ -844,6 +881,12 @@ section {
           padding-left: 10px;
           font-family: 'Merriweather Sans', sans-serif;
           margin-right: 110px;
+          border: 1px solid #ddd;
+          .responsive(@phone, {
+            width: 95%;
+            margin-top: 0;
+            margin-bottom: 10px;
+          });
         }
         .wpcf7-email {
           margin-right: 133px;
@@ -862,6 +905,9 @@ section {
           font-family: 'Merriweather Sans', sans-serif;
           margin-right: 97px;
           border: 1px solid #ddd;
+          .responsive(@phone, {
+            width: 95%;
+          });
         }
         br {
           display: none;
@@ -877,11 +923,18 @@ section {
           background-color: transparent;
           font-family: 'Merriweather Sans', sans-serif;
           width: 100px;
+          .responsive(@phone, {
+            margin: 0 auto;
+            margin-top: 20px;
+          });
           &:hover {
             cursor: pointer;
             background-color: black;
             color: white;
           }
+        }
+        .ajax-loader {
+          display: none;
         }
       }
     }

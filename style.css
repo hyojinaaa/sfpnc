@@ -788,13 +788,40 @@ section .poster-hover-con .post-hover .view-more a:hover {
   color: black;
 }
 /*************** About Us ******************/
+@media only screen and (max-width: 1023px) {
+  #about {
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #about {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #about .hero {
+    height: 580px;
+  }
+}
 #about .hero .hero-text {
   width: 700px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 767px) {
+  #about .hero .hero-text {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 #about .hero .hero-text p {
   font-size: 15px;
   line-height: 22px;
+}
+@media only screen and (max-width: 767px) {
+  #about .hero .hero-text p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 #about .hero .hero-text a {
   color: white;
@@ -804,17 +831,42 @@ section .poster-hover-con .post-hover .view-more a:hover {
   line-height: 48px;
   font-weight: bold;
 }
+@media only screen and (max-width: 767px) {
+  #about .hero .hero-text h1 {
+    font-size: 32px;
+    line-height: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 #about .mail-con {
   padding: 30px;
+}
+@media only screen and (max-width: 767px) {
+  #about .mail-con {
+    width: 100%;
+    padding: 0;
+  }
 }
 #about .mail-con p {
   font-size: 15px;
   line-height: 22px;
 }
+@media only screen and (max-width: 767px) {
+  #about .mail-con p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 #about .mail-con .mail {
   width: 700px;
   margin: 0 auto;
   text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  #about .mail-con .mail {
+    width: 100%;
+  }
 }
 #about .mail-con .mail .mc_custom_border_hdr {
   margin-top: 40px;
@@ -870,6 +922,11 @@ section .poster-hover-con .post-hover .view-more a:hover {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 767px) {
+  #about .mail-con .mail .wpcf7-form {
+    width: 100%;
+  }
+}
 #about .mail-con .mail .wpcf7-form input {
   width: 400px;
   margin: 0 auto;
@@ -879,6 +936,14 @@ section .poster-hover-con .post-hover .view-more a:hover {
   padding-left: 10px;
   font-family: 'Merriweather Sans', sans-serif;
   margin-right: 110px;
+  border: 1px solid #ddd;
+}
+@media only screen and (max-width: 767px) {
+  #about .mail-con .mail .wpcf7-form input {
+    width: 95%;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 #about .mail-con .mail .wpcf7-form .wpcf7-email {
   margin-right: 133px;
@@ -896,6 +961,11 @@ section .poster-hover-con .post-hover .view-more a:hover {
   margin-right: 97px;
   border: 1px solid #ddd;
 }
+@media only screen and (max-width: 767px) {
+  #about .mail-con .mail .wpcf7-form textarea {
+    width: 95%;
+  }
+}
 #about .mail-con .mail .wpcf7-form br {
   display: none;
 }
@@ -911,9 +981,18 @@ section .poster-hover-con .post-hover .view-more a:hover {
   font-family: 'Merriweather Sans', sans-serif;
   width: 100px;
 }
+@media only screen and (max-width: 767px) {
+  #about .mail-con .mail .wpcf7-form .wpcf7-submit {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
 #about .mail-con .mail .wpcf7-form .wpcf7-submit:hover {
   cursor: pointer;
   background-color: black;
   color: white;
+}
+#about .mail-con .mail .wpcf7-form .ajax-loader {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
