@@ -23,12 +23,102 @@ get_header(); ?>
          }?>
 
            <?php if(get_field('main_speaker_department_/_school')){
-             ?>, <a href="<?php echo the_field('main_speker_d/s_web_link'); ?>"><?php the_field('main_speaker_department_/_school'); ?></a>
+             ?>, <a href="<?php echo the_field('main_speaker_d/s_web_link'); ?>"><?php the_field('main_speaker_department_/_school'); ?></a>
            <?php } ?>
 
         <?php if(get_the_term_list( $post->ID, 'main_speaker_uni')){ ?>
           , <?php echo get_the_term_list( $post->ID, 'main_speaker_uni'); ?>
         <?php } ?>)
+
+      <?php if( get_field('main_speaker_2_name') ): ?>
+
+        , <a href="<?php echo the_field('main_speaker_2_personal_web_link'); ?>"><?php the_field('main_speaker_2_name'); ?></a> (
+
+          <?php if(get_the_term_list( $post->ID, 'main_speaker_2_second_affiliatio')) {
+            echo get_the_term_list( $post->ID, 'main_speaker_2_second_affiliatio');
+          }?>
+
+            <?php if(get_field('main_speaker_2_department_/_school')){
+              ?>, <a href="<?php echo the_field('main_speaker_2_d/s_web_link'); ?>"><?php the_field('main_speaker_2_department_/_school'); ?></a>
+            <?php } ?>
+
+         <?php if(get_the_term_list( $post->ID, 'main_speaker_2_uni')){ ?>
+           , <?php echo get_the_term_list( $post->ID, 'main_speaker_2_uni'); ?>
+         <?php } ?>)
+
+      <?php endif; ?>
+
+      <?php if( get_field('main_speaker_3_name') ): ?>
+
+        , <a href="<?php echo the_field('main_speaker_3_personal_web_link'); ?>"><?php the_field('main_speaker_3_name'); ?></a> (
+
+          <?php if(get_the_term_list( $post->ID, 'main_speaker_3_second_affiliatio')) {
+            echo get_the_term_list( $post->ID, 'main_speaker_3_second_affiliatio');
+          }?>
+
+            <?php if(get_field('main_speaker_3_department_/_school')){
+              ?>, <a href="<?php echo the_field('main_speaker_3_d/s_web_link'); ?>"><?php the_field('main_speaker_3_department_/_school'); ?></a>
+            <?php } ?>
+
+         <?php if(get_the_term_list( $post->ID, 'main_speaker_3_uni')){ ?>
+           , <?php echo get_the_term_list( $post->ID, 'main_speaker_3_uni'); ?>
+         <?php } ?>)
+
+      <?php endif; ?>
+
+      <?php if( get_field('main_speaker_4_name') ): ?>
+
+        , <a href="<?php echo the_field('main_speaker_4_personal_web_link'); ?>"><?php the_field('main_speaker_4_name'); ?></a> (
+
+          <?php if(get_the_term_list( $post->ID, 'main_speaker_4_second_affiliatio')) {
+            echo get_the_term_list( $post->ID, 'main_speaker_4_second_affiliatio');
+          }?>
+
+            <?php if(get_field('main_speaker_4_department_/_school')){
+              ?>, <a href="<?php echo the_field('main_speaker_4_d/s_web_link'); ?>"><?php the_field('main_speaker_4_department_/_school'); ?></a>
+            <?php } ?>
+
+         <?php if(get_the_term_list( $post->ID, 'main_speaker_4_uni')){ ?>
+           , <?php echo get_the_term_list( $post->ID, 'main_speaker_4_uni'); ?>
+         <?php } ?>)
+
+      <?php endif; ?>
+
+      <?php if( get_field('main_speaker_5_name') ): ?>
+
+        , <a href="<?php echo the_field('main_speaker_5_personal_web_link'); ?>"><?php the_field('main_speaker_5_name'); ?></a> (
+
+          <?php if(get_the_term_list( $post->ID, 'main_speaker_5_second_affiliatio')) {
+            echo get_the_term_list( $post->ID, 'main_speaker_5_second_affiliatio');
+          }?>
+
+            <?php if(get_field('main_speaker_5_department_/_school')){
+              ?>, <a href="<?php echo the_field('main_speaker_5_d/s_web_link'); ?>"><?php the_field('main_speaker_5_department_/_school'); ?></a>
+            <?php } ?>
+
+         <?php if(get_the_term_list( $post->ID, 'main_speaker_5_uni')){ ?>
+           , <?php echo get_the_term_list( $post->ID, 'main_speaker_5_uni'); ?>
+         <?php } ?>)
+
+      <?php endif; ?>
+
+      <?php if( get_field('main_speaker_6_name') ): ?>
+
+        , <a href="<?php echo the_field('main_speaker_6_personal_web_link'); ?>"><?php the_field('main_speaker_6_name'); ?></a> (
+
+          <?php if(get_the_term_list( $post->ID, 'main_speaker_6_second_affiliatio')) {
+            echo get_the_term_list( $post->ID, 'main_speaker_6_second_affiliatio');
+          }?>
+
+            <?php if(get_field('main_speaker_6_department_/_school')){
+              ?>, <a href="<?php echo the_field('main_speaker_6_d/s_web_link'); ?>"><?php the_field('main_speaker_6_department_/_school'); ?></a>
+            <?php } ?>
+
+         <?php if(get_the_term_list( $post->ID, 'main_speaker_6_uni')){ ?>
+           , <?php echo get_the_term_list( $post->ID, 'main_speaker_6_uni'); ?>
+         <?php } ?>)
+
+      <?php endif; ?>
       </p>
 
 <!-- Respondent 1 start -->
