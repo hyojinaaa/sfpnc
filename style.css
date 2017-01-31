@@ -995,4 +995,10 @@ section .poster-hover-con .post-hover .view-more a:hover {
 #about .mail-con .mail .wpcf7-form .ajax-loader {
   display: none;
 }
+.highlight {
+  color: red;
+}
+.none-highlight {
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */
