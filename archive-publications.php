@@ -5,59 +5,60 @@ get_header();
 
 
 <main class="seminars">
-  <div class="results">
-    <h2>Search Results: </h2>
-    <div class="search-result">
-      <h2>This is archive seminar page</h2>
-      <div id="mdf_output">
-        <?php if (have_posts()) :
-      while (have_posts()) : the_post(); ?>
+  <div class="results" id="publications-result">
+<?php  $loop = new WP_Query( array( 'post_type' => 'publications', 'posts_per_page' => 10 ) ); ?>
 
-      <article class="post <?php if ( has_post_thumbnail() ) { ?>has-thumbnail <?php } ?>">
+<?php while ( $loop->have_posts() ) : $loop->the_post();
+ //if (have_posts()) :
+//	while (have_posts()) : the_post(); ?>
 
-  <!-- post-thumbnail -->
-  <div class="post-thumbnail">
+  <article>
+    <?php  if ( has_post_thumbnail() ) { ?>
+          <div class="post-thumbnail">
     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('small-thumbnail'); ?></a>
-  </div><!-- /post-thumbnail -->
+          </div>
+  <?php } ?>
+
+<div <?php if ( has_post_thumbnail() ) { ?>class="post-content"<?php } ?>>
+
+  <?php  $trimtitle = get_the_title();
+
+          $shorttitle = wp_trim_words( $trimtitle, $num_words = 20, $more = '… ' ); ?>
+
+            <a href="<?php the_permalink(); ?>" ><h2 class="post-title"><?php echo  $shorttitle ?></h2></a>
 
 
+		<P class="post-info">Main Speaker: <?php the_field('main_speaker_name'); ?> | Posted in <?php
 
-  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			$categories = get_the_category();
+			$separator = ", ";
+			$output = '';
 
-  <p class="post-info"><?php the_time('F j, Y g:i a'); ?> | by <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a> </p>
+			if ($categories) {
 
+				foreach ($categories as $category) {
 
+					$output .= '<span>' . $category->cat_name . '</span>'  . $separator;
 
+				}
 
-    <?php  the_content();
-  endwhile;
+				echo trim($output, $separator);
 
-  else :
-    echo '<p>No content found</p>';
+			}
 
-  endif;
-  ?>
+			?></p>
 
+		<a href="<?php the_permalink(); ?>"><p class="post-excerpt"><?php echo get_the_excerpt(); ?></p></a>
+  </div>
 </article>
+  <?php endwhile; //endif; ?>
 
-      </div>
-    </div>
-
-<?php //if(!defined('ABSPATH')) die('No direct access allowed'); ?>
-<?php
-//if(class_exists('MetaDataFilterPage')) {
-    //wp_enqueue_style('meta_data_filter_front', MetaDataFilterCore::get_application_uri() . 'css/front.css');
-    //wp_enqueue_script('meta_data_filter_widget', MetaDataFilterCore::get_application_uri() . 'js/front.js', array('jquery'));
-//}
-
-?>
-
-<!-- - - - - - - - - - - - Entry - - - - - - - - - - - - - - -->
-
-<!-- - - - - - - - - - - - end Entry - - - - - - - - - - - - - - -->
 
   </div>
-  <?php get_sidebar(); ?>
+  <div class="widget">
+  <?php echo do_shortcode( ' [ULWPQSF id=100 formtitle="0" divclass=my_own_class] ' );
+  //get_sidebar(); ?>
+  </div>
 
 </main>
 
