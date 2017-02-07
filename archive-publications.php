@@ -26,16 +26,19 @@ get_header();
           $shorttitle = wp_trim_words( $trimtitle, $num_words = 20, $more = '… ' ); ?>
 
             <a href="<?php the_permalink(); ?>" ><h2 class="post-title"><?php echo  $shorttitle ?></h2></a>
-<?php if (get_the_term_list( $post->ID, 'pub_author_name')) { ?>
 
-		<P class="post-info">Author: <?php echo get_the_term_list( $post->ID, 'pub_author_name'); ?>
-      <?php if(get_the_term_list( $post->ID, 'pub_author_name2')) { ?>
-        , <?php echo get_the_term_list( $post->ID, 'pub_author_name2');
+
+
+<?php if (get_the_term_list( $post->ID, 'pub_author_name')) {
+
+  $terms_as_text = get_the_term_list( $post->ID, 'pub_author_name', '', ', ', '' );
+  $terms_as_text2 = get_the_term_list( $post->ID, 'pub_author_name2', '', ', ', '' );
+  ?>
+
+		<p class="post-info">Author: <?php echo strip_tags($terms_as_text); ?><?php if(get_the_term_list( $post->ID, 'pub_author_name2')) { ?>, <?php echo strip_tags($terms_as_text2);
 
 }  } elseif (get_field('editor_name')) { ?>
-    	<P class="post-info">Editor: <?php the_field('editor_name'); ?>
-        <?php if(get_field('editor_2_name')) {?>
-          , <?php the_field('editor_2_name');
+    	<p class="post-info">Editor: <?php the_field('editor_name'); ?><?php if(get_field('editor_2_name')) {?>, <?php the_field('editor_2_name');
     } }?> | Posted in <?php
 
 			$categories = get_the_category();

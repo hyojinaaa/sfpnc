@@ -17,16 +17,15 @@ get_header(); ?>
     <?php } ?>
      <div class="info <?php if ( has_post_thumbnail() == null ) { ?> no-image-info<?php } ?>">
 
-       <?php if (get_the_term_list( $post->ID, 'pub_author_name')) { ?>
+       <?php if (get_the_term_list( $post->ID, 'pub_author_name')) {
+         $terms_as_text = get_the_term_list( $post->ID, 'pub_author_name', '', ', ', '' );
+         $terms_as_text2 = get_the_term_list( $post->ID, 'pub_author_name2', '', ', ', '' );
+         ?>
 
-       		<P class="single-info"><strong>Author: </strong><a href="<?php echo the_field('author_personal_web_link'); ?>"><?php echo get_the_term_list( $post->ID, 'pub_author_name'); ?></a>
-             <?php if(get_the_term_list( $post->ID, 'pub_author_name2')) { ?>
-               , <a href="<?php echo the_field('author_2_personal_web_link'); ?>"><?php echo get_the_term_list( $post->ID, 'pub_author_name2'); ?></a>
+       		<P class="single-info"><strong>Author: </strong><a href="<?php echo the_field('author_personal_web_link'); ?>"><?php echo strip_tags($terms_as_text); ?></a><?php if(get_the_term_list( $post->ID, 'pub_author_name2')) { ?>, <a href="<?php echo the_field('author_2_personal_web_link'); ?>"><?php echo strip_tags($terms_as_text2); ?></a>
 
     <?php   }  } elseif (get_field('editor_name')) { ?>
-           	<P class="single-info"><strong>Editor: </strong><a href="<?php echo the_field('editor_personal_web_link'); ?>"><?php the_field('editor_name'); ?></a>
-               <?php if(get_field('editor_2_name')) {?>
-                 , <a href="<?php echo the_field('editor_2_personal_web_link'); ?>"><?php the_field('editor_2_name');
+           	<P class="single-info"><strong>Editor: </strong><a href="<?php echo the_field('editor_personal_web_link'); ?>"><?php the_field('editor_name'); ?></a><?php if(get_field('editor_2_name')) {?>, <a href="<?php echo the_field('editor_2_personal_web_link'); ?>"><?php the_field('editor_2_name');
            } }?></a>
 
       </p>
