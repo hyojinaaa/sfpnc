@@ -104,9 +104,6 @@ header nav li a:hover {
   text-decoration: underline;
 }
 /********* Main ***********/
-main {
-  padding-top: 50px;
-}
 .home {
   background-color: black;
 }
@@ -545,6 +542,13 @@ footer .site-footer strong {
 }
 .single-column .single-content {
   width: 100%;
+}
+.blurb {
+  border-radius: 5px;
+  background-color: #efefef;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 18px;
 }
 /************ Seminars Search ************/
 #uwpqsf_id {
