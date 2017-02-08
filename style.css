@@ -1005,4 +1005,34 @@ section .poster-hover-con .post-hover .view-more a:hover {
 .none-highlight {
   color: black;
 }
+/********* Conference **********/
+.conference {
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.conference .con-title {
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+.conference .con-subtitle {
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: grey;
+}
+.conference .con-time {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.conference .con-speaker {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.conference .con-speaker a {
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */

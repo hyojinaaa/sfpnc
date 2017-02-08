@@ -16,37 +16,8 @@ get_header(); ?>
      <div class="single-image"><?php the_post_thumbnail('poster'); ?></div>
     <?php } ?>
      <div class="info <?php if ( has_post_thumbnail() == null ) { ?> no-image-info<?php } ?>">
-       <p class="single-info"><strong>Speakers : </strong><a href="<?php echo the_field('main_speaker_personal_web_link'); ?>"><?php the_field('main_speaker_name'); ?></a> (
-
-         <?php if(get_the_term_list( $post->ID, 'main_speaker_second_affiliation_')) {
-           echo get_the_term_list( $post->ID, 'main_speaker_second_affiliation_');
-         }?>
-
-           <?php if(get_field('main_speaker_department_/_school')){
-             ?>, <a href="<?php echo the_field('main_speaker_d/s_web_link'); ?>"><?php the_field('main_speaker_department_/_school'); ?></a>
-           <?php } ?>
-
-        <?php if(get_the_term_list( $post->ID, 'main_speaker_uni')){ ?>
-          , <?php echo get_the_term_list( $post->ID, 'main_speaker_uni'); ?>
-        <?php } ?>)
-
-      <?php if( get_field('main_speaker_2_name') ): ?>
-
-        , <a href="<?php echo the_field('main_speaker_2_personal_web_link'); ?>"><?php the_field('main_speaker_2_name'); ?></a> (
-
-          <?php if(get_the_term_list( $post->ID, 'main_speaker_2_second_affiliatio')) {
-            echo get_the_term_list( $post->ID, 'main_speaker_2_second_affiliatio');
-          }?>
-
-            <?php if(get_field('main_speaker_2_department_/_school')){
-              ?>, <a href="<?php echo the_field('main_speaker_2_d/s_web_link'); ?>"><?php the_field('main_speaker_2_department_/_school'); ?></a>
-            <?php } ?>
-
-         <?php if(get_the_term_list( $post->ID, 'main_speaker_2_uni')){ ?>
-           , <?php echo get_the_term_list( $post->ID, 'main_speaker_2_uni'); ?>
-         <?php } ?>)
-
-      <?php endif; ?>
+       <p class="single-info"><strong>Speakers : </strong><a href="<?php echo the_field('main_speaker_personal_web_link'); ?>"><?php the_field('main_speaker_name'); ?></a> (<?php if(get_the_term_list( $post->ID, 'main_speaker_second_affiliation_')) { echo get_the_term_list( $post->ID, 'main_speaker_second_affiliation_'); }?><?php if(get_field('main_speaker_department_/_school')){ ?>, <a href="<?php echo the_field('main_speaker_d/s_web_link'); ?>"><?php the_field('main_speaker_department_/_school'); ?></a><?php } if(get_the_term_list( $post->ID, 'main_speaker_uni')){ ?>, <?php echo get_the_term_list( $post->ID, 'main_speaker_uni'); ?><?php } ?>)<?php if( get_field('main_speaker_2_name') ): ?>, <a href="<?php echo the_field('main_speaker_2_personal_web_link'); ?>"><?php the_field('main_speaker_2_name'); ?></a> (<?php if(get_the_term_list( $post->ID, 'main_speaker_2_second_affiliatio')) {
+            echo get_the_term_list( $post->ID, 'main_speaker_2_second_affiliatio'); }?><?php if(get_field('main_speaker_2_department_/_school')){ ?>, <a href="<?php echo the_field('main_speaker_2_d/s_web_link'); ?>"><?php the_field('main_speaker_2_department_/_school'); ?></a><?php } ?><?php if(get_the_term_list( $post->ID, 'main_speaker_2_uni')){ ?>, <?php echo get_the_term_list( $post->ID, 'main_speaker_2_uni'); ?><?php } ?>)<?php endif; ?>
 
       <?php if( get_field('main_speaker_3_name') ): ?>
 
@@ -250,7 +221,6 @@ echo '<p>No content found</p>';
 endif; ?>
 
 </article>
-
 
 </main>
 <?php
