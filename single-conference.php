@@ -34,29 +34,93 @@ get_header(); ?>
 
 <div class="single-content"><?php the_content(); ?></div>
 
-<?php if( get_field('main_speaker_name') ): ?>
+<?php if( get_field('main_speaker_name') ):
+  $speakerSA = get_the_term_list( $post->ID, 'main_speaker_second_affiliation_');
+  $speakerSA = strip_tags( $speakerSA );
+  $speakerUni = get_the_term_list( $post->ID, 'main_speaker_uni');
+  $speakerUni = strip_tags( $speakerUni );
+  ?>
      <div class="conference">
        <h2 class="con-title"><?php the_field('talk_title'); ?></h2>
        <h3 class="con-subtitle"><?php the_field('talk_second_title'); ?></h3>
        <p class="con-time"><?php the_field('talk_time'); ?></p>
-       <p class="con-speaker"><strong>Speakers : </strong><a href="<?php echo the_field('main_speaker_personal_web_link'); ?>"><?php the_field('main_speaker_name'); ?></a> (<?php if(get_the_term_list( $post->ID, 'main_speaker_second_affiliation_')) { echo get_the_term_list( $post->ID, 'main_speaker_second_affiliation_'); }?><?php if(get_field('main_speaker_department_/_school')){ ?>, <a href="<?php echo the_field('main_speaker_d/s_web_link'); ?>"><?php the_field('main_speaker_department_/_school'); ?></a><?php } if(get_the_term_list( $post->ID, 'main_speaker_uni')){ ?>, <?php echo get_the_term_list( $post->ID, 'main_speaker_uni'); ?><?php } ?>)</p>
+       <p class="con-speaker"><strong>Speakers : </strong>
+         <a href="<?php echo the_field('main_speaker_personal_web_link'); ?>"><?php the_field('main_speaker_name'); ?></a>
+
+          (<?php if(get_the_term_list( $post->ID, 'main_speaker_second_affiliation_')) {
+            echo $speakerSA;
+          }?><?php if( $speakerSA && get_field('main_speaker_department_/_school')){
+            ?>, <?php } ?><a href="<?php echo the_field('main_speaker_d/s_web_link'); ?>">
+
+              <?php the_field('main_speaker_department_/_school'); ?></a><?php
+              if( $speakerSA || get_field('main_speaker_department_/_school') && $speakerUni ){
+
+                ?>, <?php } echo $speakerUni; ?>
+          )</p>
        <div class="content-with-video">
          <?php the_field('description_and_video'); ?>
        </div>
      </div>
 <?php endif; ?>
 
-<?php if( get_field('main_speaker_name2') ): ?>
+<?php if( get_field('main_speaker_name2') ):
+   $speakerSA2 = get_the_term_list( $post->ID, 'main_speaker_2_second_affiliation_');
+   $speakerSA2 = strip_tags( $speakerSA2 );
+   $speakerUni2 = get_the_term_list( $post->ID, 'main_speaker_2_uni');
+   $speakerUni2 = strip_tags( $speakerUni2 );
+  ?>
      <div class="conference">
        <h2 class="con-title"><?php the_field('talk_title2'); ?></h2>
        <h3 class="con-subtitle"><?php the_field('talk_second_title2'); ?></h3>
        <p class="con-time"><?php the_field('talk_time2'); ?></p>
-       <p class="con-speaker"><strong>Speakers : </strong><a href="<?php echo the_field('main_speaker_personal_web_link2'); ?>"><?php the_field('main_speaker_name2'); ?></a> (<?php /* if(get_the_term_list( $post->ID, 'main_speaker_2_second_affiliation_')) { echo get_the_term_list( $post->ID, 'main_speaker_2_second_affiliation_'); }?><?php if(get_field('main_speaker_department_/_school2')){ ?>, <a href="<?php echo the_field('main_speaker_d/s_web_link2'); ?>"><?php the_field('main_speaker_department_/_school2'); ?></a><?php } if(get_the_term_list( $post->ID, 'main_speaker_2_uni')){ ?>, <?php echo get_the_term_list( $post->ID, 'main_speaker_2_uni'); ?><?php } */?>)</p>
+       <p class="con-speaker"><strong>Speakers : </strong>
+         <a href="<?php echo the_field('main_speaker_personal_web_link2'); ?>"><?php the_field('main_speaker_name2'); ?></a>
+
+          (<?php if(get_the_term_list( $post->ID, 'main_speaker_2_second_affiliation_')) {
+            echo $speakerSA2;
+          }?><?php if( $speakerSA2 && get_field('main_speaker_department_/_school2')){
+            ?>, <?php } ?><a href="<?php echo the_field('main_speaker_d/s_web_link2'); ?>">
+
+              <?php the_field('main_speaker_department_/_school2'); ?></a><?php
+              if( $speakerSA2 || get_field('main_speaker_department_/_school2') && $speakerUni2 ){
+
+                ?>, <?php } echo $speakerUni2; ?>
+                )</p>
        <div class="content-with-video">
          <?php the_field('description_and_video2'); ?>
        </div>
      </div>
 <?php endif; ?>
+
+<?php if( get_field('main_speaker_name2') ):
+   $speakerSA3 = get_the_term_list( $post->ID, 'main_speaker_3_second_affiliation_');
+   $speakerSA3 = strip_tags( $speakerSA3 );
+   $speakerUni3 = get_the_term_list( $post->ID, 'main_speaker_3_uni');
+   $speakerUni3 = strip_tags( $speakerUni3 );
+  ?>
+     <div class="conference">
+       <h2 class="con-title"><?php the_field('talk_title3'); ?></h2>
+       <h3 class="con-subtitle"><?php the_field('talk_second_title3'); ?></h3>
+       <p class="con-time"><?php the_field('talk_time3'); ?></p>
+       <p class="con-speaker"><strong>Speakers : </strong>
+         <a href="<?php echo the_field('main_speaker_personal_web_link3'); ?>"><?php the_field('main_speaker_name3'); ?></a>
+
+          (<?php if(get_the_term_list( $post->ID, 'main_speaker_3_second_affiliation_')) {
+            echo $speakerSA3;
+          }?><?php if( $speakerSA3 && get_field('main_speaker_department_/_school3')){
+            ?>, <?php } ?><a href="<?php echo the_field('main_speaker_d/s_web_link3'); ?>">
+
+              <?php the_field('main_speaker_department_/_school3'); ?></a><?php
+              if( $speakerSA3 || get_field('main_speaker_department_/_school3') && $speakerUni3 ){
+
+                ?>, <?php } echo $speakerUni3; ?>
+                )</p>
+       <div class="content-with-video">
+         <?php the_field('description_and_video3'); ?>
+       </div>
+     </div>
+<?php endif; ?>
+
 
 
  </div>
