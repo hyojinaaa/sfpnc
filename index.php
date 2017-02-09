@@ -31,7 +31,7 @@ get_header(); ?>
 
 		//arg to determine if the post is an upcoming event.
 	$upcoming_args = array(
-		'post_type'		=> 'seminars',
+		'post_type' => array('seminars', 'symposium', 'conference'),
 		'posts_per_page'	=> -1,
 		'meta_key' => 'date',
 		'meta_compare' => 'BETWEEN',
