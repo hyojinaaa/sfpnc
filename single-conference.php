@@ -92,7 +92,7 @@ get_header(); ?>
      </div>
 <?php endif; ?>
 
-<?php if( get_field('main_speaker_name2') ):
+<?php if( get_field('main_speaker_name3') ):
    $speakerSA3 = get_the_term_list( $post->ID, 'main_speaker_3_second_affiliation_');
    $speakerSA3 = strip_tags( $speakerSA3 );
    $speakerUni3 = get_the_term_list( $post->ID, 'main_speaker_3_uni');
@@ -117,6 +117,93 @@ get_header(); ?>
                 )</p>
        <div class="content-with-video">
          <?php the_field('description_and_video3'); ?>
+       </div>
+     </div>
+<?php endif; ?>
+
+<?php if( get_field('main_speaker_name4') ):
+   $speakerSA4 = get_the_term_list( $post->ID, 'main_speaker_4_second_affiliation_');
+   $speakerSA4 = strip_tags( $speakerSA4 );
+   $speakerUni4 = get_the_term_list( $post->ID, 'main_speaker_4_uni');
+   $speakerUni4 = strip_tags( $speakerUni4 );
+  ?>
+     <div class="conference">
+       <h2 class="con-title"><?php the_field('talk_title4'); ?></h2>
+       <h3 class="con-subtitle"><?php the_field('talk_second_title4'); ?></h3>
+       <p class="con-time"><?php the_field('talk_time4'); ?></p>
+       <p class="con-speaker"><strong>Speakers : </strong>
+         <a href="<?php echo the_field('main_speaker_personal_web_link4'); ?>"><?php the_field('main_speaker_name4'); ?></a>
+
+          (<?php if(get_the_term_list( $post->ID, 'main_speaker_4_second_affiliation_')) {
+            echo $speakerSA4;
+          }?><?php if( $speakerSA4 && get_field('main_speaker_department_/_school4')){
+            ?>, <?php } ?><a href="<?php echo the_field('main_speaker_d/s_web_link4'); ?>">
+
+              <?php the_field('main_speaker_department_/_school4'); ?></a><?php
+              if( $speakerSA4 || get_field('main_speaker_department_/_school4') && $speakerUni4 ){
+
+                ?>, <?php } echo $speakerUni4; ?>
+                )</p>
+       <div class="content-with-video">
+         <?php the_field('description_and_video4'); ?>
+       </div>
+     </div>
+<?php endif; ?>
+
+<?php if( get_field('main_speaker_name5') ):
+   $speakerSA5 = get_the_term_list( $post->ID, 'main_speaker_5_second_affiliation_');
+   $speakerSA5 = strip_tags( $speakerSA5 );
+   $speakerUni5 = get_the_term_list( $post->ID, 'main_speaker_5_uni');
+   $speakerUni5 = strip_tags( $speakerUni5 );
+  ?>
+     <div class="conference">
+       <h2 class="con-title"><?php the_field('talk_title5'); ?></h2>
+       <h3 class="con-subtitle"><?php the_field('talk_second_title5'); ?></h3>
+       <p class="con-time"><?php the_field('talk_time5'); ?></p>
+       <p class="con-speaker"><strong>Speakers : </strong>
+         <a href="<?php echo the_field('main_speaker_personal_web_link5'); ?>"><?php the_field('main_speaker_name5'); ?></a>
+
+          (<?php if(get_the_term_list( $post->ID, 'main_speaker_5_second_affiliation_')) {
+            echo $speakerSA5;
+          }?><?php if( $speakerSA5 && get_field('main_speaker_department_/_school5')){
+            ?>, <?php } ?><a href="<?php echo the_field('main_speaker_d/s_web_link5'); ?>">
+
+              <?php the_field('main_speaker_department_/_school5'); ?></a><?php
+              if( $speakerSA5 || get_field('main_speaker_department_/_school5') && $speakerUni5 ){
+
+                ?>, <?php } echo $speakerUni5; ?>
+                )</p>
+       <div class="content-with-video">
+         <?php the_field('description_and_video5'); ?>
+       </div>
+     </div>
+<?php endif; ?>
+
+<?php if( get_field('main_speaker_name6') ):
+   $speakerSA6 = get_the_term_list( $post->ID, 'main_speaker_6_second_affiliation_');
+   $speakerSA6 = strip_tags( $speakerSA6 );
+   $speakerUni6 = get_the_term_list( $post->ID, 'main_speaker_6_uni');
+   $speakerUni6 = strip_tags( $speakerUni6 );
+  ?>
+     <div class="conference">
+       <h2 class="con-title"><?php the_field('talk_title6'); ?></h2>
+       <h3 class="con-subtitle"><?php the_field('talk_second_title6'); ?></h3>
+       <p class="con-time"><?php the_field('talk_time6'); ?></p>
+       <p class="con-speaker"><strong>Speakers : </strong>
+         <a href="<?php echo the_field('main_speaker_personal_web_link6'); ?>"><?php the_field('main_speaker_name6'); ?></a>
+
+          (<?php if(get_the_term_list( $post->ID, 'main_speaker_6_second_affiliation_')) {
+            echo $speakerSA6;
+          }?><?php if( $speakerSA6 && get_field('main_speaker_department_/_school6')){
+            ?>, <?php } ?><a href="<?php echo the_field('main_speaker_d/s_web_link6'); ?>">
+
+              <?php the_field('main_speaker_department_/_school6'); ?></a><?php
+              if( $speakerSA6 || get_field('main_speaker_department_/_school6') && $speakerUni6 ){
+
+                ?>, <?php } echo $speakerUni6; ?>
+                )</p>
+       <div class="content-with-video">
+         <?php the_field('description_and_video6'); ?>
        </div>
      </div>
 <?php endif; ?>
